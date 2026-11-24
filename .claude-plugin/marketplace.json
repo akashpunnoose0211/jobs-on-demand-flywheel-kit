@@ -9,7 +9,7 @@
       "name": "jobs-on-demand-flywheel-kit",
       "source": "./",
       "description": "The Jobs-On-Demand Flywheel Kit: five agents for your GoHighLevel account, installed by your AI.",
-      "version": "1.1.0"
+      "version": "1.2.0"
     }
   ]
 }

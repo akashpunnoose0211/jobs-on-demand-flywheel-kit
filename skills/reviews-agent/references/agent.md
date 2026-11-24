@@ -61,8 +61,13 @@ The AI builds the check-in message and the four routes below. You pick [CALL-FIR
 | Unhappy, complaint | Every review, referral and promo ask stops. Recovery opens. |
 | No reply | One respectful second try, then leave the door open |
 
-The agent sorts only after the customer answers. A person, not the AI, decides when a complaint is fixed.
-Done when: all four test answers from your own test contact land on the right route, and the unhappy route sends no ask.
+Replies are sorted only after the customer answers, by automations and by a person. Never add a second answering assistant: agent 1 allows exactly one, and two means double replies.
+- An automation (a keyword or tag rule) sorts only clear answers. Any complaint word sends the reply to a person, never to happy.
+- A person sorts every unclear or mixed reply, and sets Quality Status.
+- The booking agent's answering agent must not answer check-in replies. For example, it skips contacts at Work Complete or later.
+
+A person, not the AI, decides when a complaint is fixed.
+Done when: all four test answers from your own test contact land on the right route, the unhappy route sends no ask, and no answering agent replies to them.
 
 **3. Build the problem guard. `You + AI`**
 When Quality Status turns to unresolved or unhappy:
@@ -139,7 +144,7 @@ A person approves every message before a customer sees it. Run the full loop on 
 Done when: three pilot jobs have run cleanly, every alert they raised reached the right person, and the daily and weekly checks have an owner.
 
 ## The agent's instructions
-If your tool has an assistant that can read customer replies, paste these into it. If not, the automations send the approved messages and a person sorts each reply by the same four routes. Either way, the alerts are the step 8 automations, and they fire when Quality Status is set.
+These are the written rules for the reviews agent. Your AI assistant builds the automations from them, and the person who sorts replies follows them. Do not paste them into an answering assistant. The automations send the approved messages. Keyword or tag rules and a person sort each reply by the four routes (step 2). The alerts are the step 8 automations, and they fire when Quality Status is set.
 
 ```text
 You are the reviews agent for [COMPANY], a [TRADE] business in
@@ -166,7 +171,8 @@ Alerts may go out during: [ALERT HOURS]
 ORDER OF WORK
 1. The next business day after Job Completed At, send the check-in.
    For [CALL-FIRST JOBS], send no text. Send alert D (check-in call due).
-2. Wait for the answer. Sort only after the customer replies.
+2. Wait for the answer. Sort only after the customer replies. A
+   keyword or tag rule sorts only clear answers; a person sorts the rest.
    - Happy or complete: set Quality Status to happy.
    - Question or something open: set unresolved. Assign the owner
      with a dated next step. Stop all asks. Send alert C (open
@@ -354,6 +360,8 @@ Use your own test contact and made-up jobs, with every alert pointed at your own
 | 12 | Complaint, alert check | Unhappy alert B arrives at once, with the customer's words. No review follow-up alert ever goes out while it is open. |
 | 13 | Open question, no reply, no reply to the second try, a [CALL-FIRST JOBS] job, a referral that meets the trigger, a case with no approved message | Each one sends its own alert (C to H) once, to the right person. |
 | 14 | Event outside [ALERT HOURS] | The alert waits and arrives first thing when the hours start. |
+| 15 | Mixed reply ("looks good, but the gate won't close") | No rule sets it to happy. A person sorts it and sets Quality Status. No review ask goes out first. |
+| 16 | Any reply to the check-in | The booking agent's answering agent stays silent. Only this agent's approved messages reach the test contact. |
 
 ## When a person takes over
 The agent stops and a person steps in when:

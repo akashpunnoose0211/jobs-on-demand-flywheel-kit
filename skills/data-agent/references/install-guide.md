@@ -189,7 +189,7 @@ Everything is built switched off, with a filter that lets only your test contact
 15. `You + AI` **Run one real-looking lead through everything.** Message, then hand-off, alert, call task, follow-up, booking, visit outcome and scoreboard row.
 16. `You` **Turn on each agent whose tests all passed.** Claude Code removes the test filter from that agent's workflows only. Texts switch on the day your texting approval lands.
 17. `You` **Launch ads on your approver's yes.** The spend check stays in practice mode until the approver says start.
-18. `You` **Teach your team the takeover play:** add `stop bot`, reply from the business number, log what happened. Show everyone on an alert list what each alert asks.
+18. `You` **Teach your team with the team card** (`cheat-sheets/TEAM-CARD.md`). Print it for everyone on an alert list. Walk through the takeover play (the booking agent's "When a person takes over" steps): add `stop bot`, call first, then text from the business number, and log a row in the data agent's Failure Log. Show everyone on an alert list what each alert asks.
 19. `You` **Set the rhythm:**
     - **Daily:** clear the review lists.
     - **Weekly:** an hour on ads.
@@ -199,7 +199,7 @@ Everything is built switched off, with a filter that lets only your test contact
 
 **Your first week live.** Don't launch and disappear. Type **"check my first week"** each day, and Claude Code looks with you:
 - **Daily:** ad spend is on pace, leads are arriving, the bot is replying, good leads reach a person, bad fits are turned away politely, and your team calls fast enough.
-- **After 7 days:** cost per lead, how many leads were a good fit, how many booked, why bad fits didn't fit, any missed hand-offs, and where the bot got confused. Claude Code writes the fixes into `PROGRESS.md`.
+- **After 7 days:** cost per booked appointment, how many leads were a good fit, how many booked, why bad fits didn't fit, any missed hand-offs, and where the bot got confused. Claude Code writes the fixes into `PROGRESS.md`.
 
 ## Phase 5: Advanced: your own database (optional, after a few weeks)
 The data agent already works without this. Day 6 gives you the scoreboard, the alerts and the Friday review, using GoHighLevel and a spreadsheet. Phase 5 only removes the Friday typing: a database fills the scoreboard and sends the trend alerts by itself.

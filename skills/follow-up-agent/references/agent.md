@@ -22,7 +22,7 @@
 - **A named owner for open quotes ([SALES OWNER]), and a backup ([BACKUP NAME]).**
 - **Your approved facts:** [FINANCING YOU REALLY OFFER, OR "NONE"], the [REAL OBJECTION] homeowners raise after a quote and your [APPROVED ANSWER], your [EXACT WARRANTY FACTS], and your discount rules ([WHO MAY APPROVE, LIMIT, END DATE]).
 - **Proof:** before-and-after photos of finished local jobs.
-- **Push alerts to your team's phones,** sent by an automation: your customer tool's phone app notice, a text, or your team's chat app. Fallback: each alert becomes a task with the same words, on a daily list a named person reads every morning. Then your team learns of a reply or a due call only when they open the list.
+- **Push alerts to your team's phones,** sent by an automation: your customer tool's phone app notice, a text, or your team's chat app. Fallback: each alert becomes a task with the same words, on one fallback list. A named person keeps that list open all day, as agent 1 says. Nothing reaches a phone, so a reply or a due call waits until that person sees it.
 - **From MY-NUMBERS.md:** [ALERT CHANNEL], [SALES ALERT LIST], [ALERT HOURS], [QUIET HOURS], [CALLER NAME] and [REP NAME].
 - **One test contact you own:** your own phone number and email.
 
@@ -34,22 +34,22 @@ To install this agent alone, type **"install my follow-up agent"**, or use the p
    Done when: your AI assistant has every fact and no blank is left.
 2. `You` **Check the texting line.** Confirm the line is approved to send, and calls and texts use one number.
    Done when: a text sent from the business line lands on your own phone.
-3. `AI` **Create the fields, tags and stages.** Fields: Quote Sent At, Quote Amount, Decision Status (pending, won or lost), Lost Reason, Financing Discussed, Next Follow-up (date and owner), Visit Status (booked, showed, no-show or cancelled; use your calendar's own status if it has one). Tags: `booked`, and `stop bot` (a person has taken over; this is the manual hold). Both already exist if you installed agent 1. Stages: Ghosted for leads (already on the agent 1 board); Quote Sent, Decision Pending, Won and Lost for quotes, on their own board.
+3. `AI` **Create the fields, tags and stages.** Fields: Quote Sent At, Quote Amount, Decision Status (pending, won or lost), Lost Reason, Financing Discussed, Next Follow-up (date and owner), Visit Date (the booked date and time; skip it if agent 1 or your calendar already has it), Visit Outcome (held, no-show, cancelled or moved; agent 5 reuses this field). A visit counts as booked when it has the `booked` tag and a Visit Date. Booked is not a Visit Outcome value. Tags: `booked`, and `stop bot` (a person has taken over; this is the manual hold). Both already exist if you installed agent 1. Stages: Ghosted for leads (already on the agent 1 board); Quote Sent, Decision Pending, Won and Lost for quotes, on their own board.
    Done when: every field, tag and stage exists and an automation can read it.
 4. `AI` **Build the follow-up for leads who left a phone number.** Use Ladder 1 below. If you installed agent 1, its "Form lead fast reply" automation already sends the first text, both call tasks and the "Just tried you" text. Do not build those twice. Add only the 1-day and 3-day texts, in the same automation or in one that starts where it ends. Each call is a task for a person.
    Done when: the automation sits in draft with every wait, text and call task in order, and no step is built in both agents.
 5. `AI` **Build the follow-up for leads who messaged you.** Use Ladder 2 below, and the channel rule under it. If you installed agent 1, its hand-off already creates the 5-minute call task. Do not build it again.
    Done when: the automation sits in draft with every step in order, and no call task is built in both agents.
-6. `AI` **Build the show-up reminders.** Use Ladder 3 below. It starts when a visit is booked, and its times count back from the visit. The no-show rescue starts only when a person marks the visit "no-show".
-   Done when: the automation sits in draft, a test booking lines up every reminder at the right time, and marking "no-show" starts the rescue.
+6. `AI` **Build the show-up reminders.** Use Ladder 3 below. It starts when a visit is booked, and its times count back from the visit. The no-show rescue starts only when a person sets Visit Outcome to "no-show".
+   Done when: the automation sits in draft, a test booking lines up every reminder at the right time, and setting Visit Outcome to "no-show" starts the rescue.
 7. `You + AI` **Write the messages that have no fixed words.** Ladder 2's texts and email, the four weekly texts and the later quote touches are described below, not scripted. Your AI assistant drafts each from your facts; a person approves each. It also fits the objection answers to your trade, for a person to approve.
    Done when: every message has approved words and no blank.
 8. `AI` **Build the quote follow-up.** It starts only when Quote Sent At is filled. Keep it separate from the lead ladders.
    Done when: filling Quote Sent At on your test contact starts it, and nothing else does.
 9. `AI` **Wire the stop rules into every branch.** Use the "Stop at once when" list in the instructions.
    Done when: every branch has an owner and a stop rule. The test results come in step 13.
-10. `You + AI` **Set up how alerts reach your team.** If you did this in agent 1 (its step 10), keep those settings and go to the "Done when". If not, fill in [ALERT CHANNEL], [SALES ALERT LIST] and [ALERT HOURS]. If no automation in your tools can send to a phone by itself, write "fallback" as [ALERT CHANNEL] and name the person who reads the daily list.
-    Done when: one test alert, sent by an automation to your own phone, lands there. Or, with the fallback: a test alert task shows on the list, and its reader is named.
+10. `You + AI` **Set up how alerts reach your team.** If you did this in agent 1 (its step 10), keep those settings and go to the "Done when". If not, fill in [ALERT CHANNEL], [SALES ALERT LIST] and [ALERT HOURS]. If no automation in your tools can send to a phone by itself, write "fallback" as [ALERT CHANNEL] and name the person who keeps the fallback list open all day.
+    Done when: one test alert, sent by an automation to your own phone, lands there. Or, with the fallback: a test alert task shows on the fallback list, and the person who keeps it open is named.
 11. `AI` **Add the push alerts.** Add an alert step at each moment under "Alerts to your team", in that moment's automation, on top of the task, never instead of it.
     - **One call task, one alert.** Agent 1 owns the alerts for the first call (its new-lead alert and its 5-minute "Still not called" alert). Never add an alert to that call task. Ladder 1's second call is built in agent 1 with no alert: add "Follow-up call due" to it. Every call task this agent builds gets "Follow-up call due".
     - **Replies from Ghosted:** a small automation of its own. It starts on any reply from a contact in Ghosted, creates a task for [SALES OWNER] with their words, and sends the reply alert.
@@ -58,9 +58,9 @@ To install this agent alone, type **"install my follow-up agent"**, or use the p
     Done when: every open quote shows a stage, an owner and a next date.
 13. `You + AI` **Run the test list.** You play the homeowner from your own phone. Shorten every wait to a minute or two and set [SALES ALERT LIST] to only you; put both back after. For Ladder 3, book test visits a short time out. Your AI assistant checks the tags, stages and fields.
     Done when: every test passes, no real customer got a test message, and no team member got a test alert.
-14. `You` **Teach the team the takeover play, then turn it on.** Delete the test contacts first. Show everyone on [SALES ALERT LIST] the play under "When a person takes over" and what each alert asks. Show [REP NAME] how to mark each visit "showed" or "no-show" in your customer software.
+14. `You` **Teach the team the takeover play, then turn it on.** Delete the test contacts first. Show everyone on [SALES ALERT LIST] the takeover play in agent 1 (section "When a person takes over") and what each alert asks. Show [REP NAME] how to set Visit Outcome on each visit: held, no-show, cancelled or moved.
     Done when: every team member can run the play without looking it up, and the automations are live.
-15. `You` **Set the check.** Daily: clear quotes with no owner and overdue follow-ups. With the fallback, also clear every alert task still open. Weekly: look at quotes that are 2, 7 and 30 days old. Also count how many booked visits showed, and how many no-shows booked again.
+15. `You` **Set the check.** Daily: clear quotes with no owner and overdue follow-ups. With the fallback, also clear every alert task still open. Weekly: look at quotes that are 2, 7 and 30 days old. Also count how many booked visits were held, and how many no-shows booked again.
     Done when: one named person owns that check.
 
 ## The agent's instructions
@@ -86,8 +86,10 @@ carries something useful: a next step, an answer, proof, or a clear
 close.
 Texts and calls come from [BUSINESS PHONE] only.
 Offer only real open times from [CALENDAR]. Booking link: [BOOKING LINK].
-Send nothing during quiet hours: [QUIET HOURS]. Use the homeowner's
-preferred channel when one is on file.
+Send nothing during quiet hours: [QUIET HOURS]. Every follow-up text
+in this file respects them. The one exception is the booking agent's
+first reply to a brand-new lead, which may go out at any hour.
+Use the homeowner's preferred channel when one is on file.
 
 CALLS
 You work by text, email and alert. When the schedule says "a person
@@ -111,30 +113,33 @@ Outside [ALERT HOURS], hold the alert and send it when alert hours
 start. After a stop rule, send no more call alerts for that contact.
 A contact on manual hold (tag: stop bot) gets no alerts at all.
 If [ALERT CHANNEL] is "fallback": make each alert a task with the
-same words, on the daily list.
+same words, on the fallback list.
 
 LEAD FOLLOW-UP
-Starts after the booking agent's first reply. Follow Ladder 1 or
-Ladder 2. Ladder 1 ends with its 3-day text. Ladder 2 goes on with
+Ladder 1 starts after the booking agent's first reply. Ladder 2
+starts at the booking agent's hand-off, when its bot hands the lead
+to a person, so it never talks over the bot.
+Ladder 1 ends with its 3-day text. Ladder 2 goes on with
 one useful touch a week for four weeks. When a ladder ends with no
 answer: move the lead to Ghosted and stop. No loops.
 
 SHOW-UP REMINDERS (LADDER 3)
-Starts when a visit is booked (tag: booked) with a date and time on
-[CALENDAR]. Send only the Ladder 3 texts, at their times.
+Starts when a visit is booked: tag booked, with Visit Date filled
+from [CALENDAR]. Send only the Ladder 3 texts, at their times.
 Skip any reminder whose time passed before they booked. If two
 reminders would land within an hour of each other, send only the
 later one.
 The confirmation waits until quiet hours end. Skip any other
 reminder that falls in quiet hours. Never send one late.
-A reschedule clears the old reminders and starts Ladder 3 again.
-The no-show rescue starts only when a person marks the visit
+A reschedule (Visit Outcome: moved, with a new Visit Date) clears
+the old reminders and starts Ladder 3 again.
+The no-show rescue starts only when a person sets Visit Outcome to
 "no-show". After 48 hours with no reply: move the lead to Ghosted
 and stop.
 A plain yes ("yes", "works", "ok", a thumbs up) keeps the reminders
 going. Any other reply stops Ladder 3 and goes to a person, with the
 reply alert. That person sends any later reminder by hand.
-Ladder 3 ends when the visit is marked "showed" or is cancelled.
+Ladder 3 ends when Visit Outcome is "held" or "cancelled".
 
 QUOTE FOLLOW-UP
 Starts only when Quote Sent At is filled. Separate from the lead
@@ -160,12 +165,12 @@ is an option, never a judgment about the homeowner. Same messages and
 same timing for every homeowner. No pressure. No false urgency.
 
 STOP AT ONCE WHEN
-- the homeowner replies (any reply; on Ladder 3, any reply except a
-  plain yes to the visit time)
+- the homeowner replies (any reply; except a plain yes to the visit
+  time on Ladder 3, or a thumbs-up or "got it" to the first quote text)
 - they book (tag: booked). This stops Ladders 1 and 2 and starts
   Ladder 3.
 - they decide on the quote (won or lost), or cancel
-- Ladder 3 only: the visit is marked "showed", or is cancelled
+- Ladder 3 only: Visit Outcome is set to held or cancelled
 - they opt out or are marked do not disturb
 - they fail the service or area check (tag: ai dq)
 - a person puts the contact on manual hold (tag: stop bot)
@@ -197,7 +202,7 @@ The booking agent sends the first text at 0 seconds and promises a call from the
 The two [DAY] times must be real open times on your calendar. If your tool cannot fill them in by itself, make the 1-day text a task: a person fills in the two times and sends it.
 
 ### Ladder 2: the lead messaged you, then went quiet
-The clock starts at the booking agent's first reply; every time counts from that start. Most tools count each wait from the step before, so set each wait as the gap between two rows.
+The clock starts at the hand-off from the booking agent: the moment its bot hands the lead to a person. It never starts at the bot's first reply, so it never talks over the bot. Every time counts from that hand-off. Most tools count each wait from the step before, so set each wait as the gap between two rows.
 
 | When | What happens |
 |---|---|
@@ -222,16 +227,16 @@ It starts when the visit is booked. Most times count back from the visit's date 
 | The day before | Text: "Quick reminder: your [VISIT NAME] is tomorrow at [TIME]. If anything changed, just reply here." |
 | Morning of the visit | Text: "Your [VISIT NAME] is today at [TIME]. If anything changed, reply here and we'll find a new time." |
 | 1 hour before | Text: "See you in about an hour. Keep an eye out for [BUSINESS PHONE]." |
-| A person marks the visit "no-show" | Text: "Hi [FIRST NAME], we're ready for your [VISIT NAME]. Is now still a good time?" Then a person calls right away. |
+| A person sets Visit Outcome to "no-show" | Text: "Hi [FIRST NAME], we're ready for your [VISIT NAME]. Is now still a good time?" Then a person calls right away. |
 | 5 minutes after that call is marked "no answer" | Text: "Tried to reach you for your [VISIT NAME]. Life happens. Want to pick a new time? [BOOKING LINK]" |
 | The next day | Text: "Still want help with [THE PROBLEM THEY DESCRIBED]? Happy to find you a new time this week: [BOOKING LINK]" |
 | 48 hours after the no-show, no reply | Move the lead to Ghosted and stop. |
 
 Stop rules for this ladder:
 - A plain yes to the visit time ("yes", "works", "ok", a thumbs up) keeps the reminders going.
-- Any other reply, a cancel, or STOP ends the automatic texts. The reply goes to a person with alert 6.
+- Any other reply, a cancel, or STOP ends the automatic texts. The reply goes to a person with the "Booked homeowner replied" alert.
 - After that, the person sends any later reminder by hand, from the same number.
-- A reschedule clears the old reminders and starts this ladder again for the new time.
+- A reschedule (Visit Outcome: moved) clears the old reminders and starts this ladder again for the new Visit Date.
 - Never text during [QUIET HOURS]. The 5-minute text waits until they end; any other reminder that falls inside them is skipped.
 - Skip a reminder whose time passed before they booked. If two would land within an hour, send only the later one.
 
@@ -262,28 +267,27 @@ Your rep uses these when replying by hand. Your AI assistant may use them in the
 
 | They say | A short answer |
 |---|---|
-| "How much?" (before the visit) | "It depends on what's causing it and how big it is. That's why we look first: you get a real number, not a guess. What made you ask about price first?" |
 | "That's more than I expected." (after the quote) | "Fair. Is it the total, or the timing of the payment? If it's timing, I can send the financing options we actually offer." |
 | "I need to think about it." | "Totally fair. What part are you still unsure about: the problem, the timing, or the cost?" |
 | "We're getting other quotes." | "Smart. When you compare, check what each quote covers. Want me to walk you through ours line by line?" |
 | "I need to talk to my spouse." | "Of course. Want [REP NAME] to walk you both through it? Pick a time that works for both of you: [BOOKING LINK]" |
 | "Now's not a good time." | "No problem. Should I check back later this week, or later in the month?" |
 
-Cut the financing sentence if you offer no financing. One question per answer. No pressure, no false urgency, and no fact that is not in your approved facts.
+Before the visit, a price question gets agent 1's approved price line (its "Common questions" rules). This file has no price answer of its own. Cut the financing sentence if you offer no financing. One question per answer. No pressure, no false urgency, and no fact that is not in your approved facts.
 
 ### Alerts to your team
 These go to [SALES ALERT LIST] through [ALERT CHANNEL], never to a homeowner, with the blanks filled from the contact's record. Outside [ALERT HOURS], an alert waits until they start.
 
 | When | Alert |
 |---|---|
-| A call task is created on Ladder 1 or Ladder 2, or for a no-show on Ladder 3. Skip the first call: agent 1 already alerts for it. | See alert 1 below |
-| Ladder 1's 1-day text is a task, because your tool cannot fill in open times | See alert 2 below |
-| A quiet lead replies, during a ladder or after it ended in Ghosted (any reply except an opt-out) | See alert 3 below |
-| A homeowner with an open quote replies (any reply except an opt-out) | See alert 4 below |
-| The three-month quote touch has gone out with no decision | See alert 5 below |
-| A booked homeowner replies to a Ladder 3 text (any reply except an opt-out) | See alert 6 below |
+| A call task is created on Ladder 1 or Ladder 2, or for a no-show on Ladder 3. Skip the first call: agent 1 already alerts for it. | "Follow-up call due" |
+| Ladder 1's 1-day text is a task, because your tool cannot fill in open times | "Text due" |
+| A quiet lead replies, during a ladder or after it ended in Ghosted (any reply except an opt-out) | "Quiet lead replied" |
+| A homeowner with an open quote replies (any reply except an opt-out) | "Quote reply" |
+| The three-month quote touch has gone out with no decision | "Quote follow-up ended" |
+| A booked homeowner replies to a Ladder 3 text (any reply except an opt-out) | "Booked homeowner replied" |
 
-**Alert 1.**
+**The "Follow-up call due" alert.**
 
 ```
 Follow-up call due:
@@ -292,7 +296,7 @@ Follow-up call due:
 Call now from the business line: [PHONE].
 ```
 
-**Alert 2.**
+**The "Text due" alert.**
 
 ```
 Text due:
@@ -301,27 +305,27 @@ Text due:
 Pick two real open times and send the 1-day text from the task.
 ```
 
-**Alert 3.**
+**The "Quiet lead replied" alert.**
 
 ```
 Quiet lead replied:
 [NAME],
 [JOB].
 They said: '[THEIR WORDS]'.
-Reply now in the same conversation.
+Reply to them now, from the business number.
 ```
 
-**Alert 4.**
+**The "Quote reply" alert.**
 
 ```
 Quote reply:
 [NAME],
 [PROJECT].
 They said: '[THEIR WORDS]'.
-Reply now in the same conversation.
+Reply to them now, from the business number.
 ```
 
-**Alert 5.**
+**The "Quote follow-up ended" alert.**
 
 ```
 Quote follow-up ended, no decision:
@@ -331,23 +335,23 @@ Quote follow-up ended, no decision:
 Set a next date or close it with a reason.
 ```
 
-**Alert 6.**
+**The "Booked homeowner replied" alert.**
 
 ```
 Booked homeowner replied:
 [NAME],
 [VISIT NAME] on [DATE] at [TIME].
 They said: '[THEIR WORDS]'.
-Reply now in the same conversation.
+Reply to them now, from the business number.
 ```
 
-Each one is a team alert, your AI may adjust the wording. If you use the fallback, each alert is a task with these same words, on the daily list.
+Each one is a team alert, your AI may adjust the wording. If you use the fallback, each alert is a task with these same words, on the fallback list.
 
 ## Test list
-Use only your own test contact and made-up quotes, with only you on [SALES ALERT LIST]. With the fallback, "alert lands" reads "a task with the same words shows on the daily list".
+Use only your own test contact and made-up quotes, with only you on [SALES ALERT LIST]. With the fallback, "alert lands" reads "a task with the same words shows on the fallback list".
 
 1. **Quiet lead with a phone number.** Never reply. Pass: every Ladder 1 step fires once, in order. Call tasks land with the named person, once each. The first call carries only agent 1's new-lead alert; the second call brings one "Follow-up call due" alert.
-2. **Quiet lead from a message.** Give a phone number, then never reply. Pass: Ladder 2 runs in order with four weekly texts, the lead ends in Ghosted, and nothing repeats. The 5-minute call carries only agent 1's alert; the 48-hour call brings one "Follow-up call due" alert. Then reply once. Pass: one "Quiet lead replied" alert lands, and nothing sends to the contact.
+2. **Quiet lead from a message.** Message your page, answer the bot until it hands you to a person, then never reply. Pass: nothing from Ladder 2 arrives while the bot is still talking. Ladder 2 starts at the hand-off and runs in order with four weekly texts, the lead ends in Ghosted, and nothing repeats. The 5-minute call carries only agent 1's alert; the 48-hour call brings one "Follow-up call due" alert. Then reply once. Pass: one "Quiet lead replied" alert lands, and nothing sends to the contact.
 3. **Reply mid-ladder.** Pass: nothing else sends to the contact. One "Quiet lead replied" alert lands with your exact words, and the sales owner gets a task.
 4. **Booking mid-ladder.** Pass: the `booked` tag cancels every Ladder 1 and Ladder 2 branch and starts Ladder 3. No more lead call alerts come.
 5. **Opt-out.** Pass: nothing more sends, and no alert comes.
@@ -361,13 +365,13 @@ Use only your own test contact and made-up quotes, with only you on [SALES ALERT
 13. **Quote reply.** Fill Quote Sent At, then reply to the first quote text. Pass: the quote messages stop, and one "Quote reply" alert lands with your exact words.
 14. **Quote ends with no decision.** Fill Quote Sent At and never reply or decide. Pass: after the three-month touch, one "Quote follow-up ended" alert lands. The quote stays open with its owner. Nothing more sends.
 15. **Outside alert hours.** Set [ALERT HOURS] to start a few minutes from now, then reach Ladder 1's second call. Pass: its alert waits and lands when alert hours start, once. Put the real hours back.
-16. **Fallback only.** If [ALERT CHANNEL] is "fallback", rerun test 3. Pass: the alert shows as a task with the same words, on the daily list.
+16. **Fallback only.** If [ALERT CHANNEL] is "fallback", rerun test 3. Pass: the alert shows as a task with the same words, on the fallback list.
 17. **Booked: reminders.** Book a test visit a short time out, with the reminder times shortened. Pass: the confirmation, proof, day-before, morning-of and 1-hour texts each land once, in order.
 18. **Booked during quiet hours.** Pass: the confirmation waits until quiet hours end. No text lands inside [QUIET HOURS].
 19. **Booked for later today.** Pass: reminders whose time has passed are skipped. Two reminders within an hour send only the later one.
 20. **Reply to a reminder.** Reply "yes" to the confirmation. Pass: the reminders keep coming and no alert goes out. Then reply "can we do Thursday instead?". Pass: the automatic texts stop, and one "Booked homeowner replied" alert lands with your exact words.
-21. **Cancel, reschedule or STOP.** Pass: a cancel or STOP ends every reminder, and STOP brings no alert. A reschedule clears the old reminders and starts them again for the new time, once.
-22. **No-show.** Mark the test visit "no-show". Pass: the "we're ready" text goes and one call task brings one "Follow-up call due" alert. Mark the call "no answer". Pass: the new-time text goes, then the next-day text. With no reply, the lead lands in Ghosted after 48 hours and nothing more sends.
+21. **Cancel, reschedule or STOP.** Pass: a cancel (Visit Outcome: cancelled) or STOP ends every reminder, and STOP brings no alert. A reschedule (Visit Outcome: moved) clears the old reminders and starts them again for the new time, once.
+22. **No-show.** Set the test visit's Visit Outcome to "no-show". Pass: the "we're ready" text goes and one call task brings one "Follow-up call due" alert. Mark the call "no answer". Pass: the new-time text goes, then the next-day text. With no reply, the lead lands in Ghosted after 48 hours and nothing more sends.
 
 ## When a person takes over
 - The scheduled calls, each a task with a push alert.
@@ -375,15 +379,12 @@ Use only your own test contact and made-up quotes, with only you on [SALES ALERT
 - An alert that never arrived, came twice, or went to the wrong person. A person fixes the alert step, and the daily check catches anything missed.
 - Any reply that is off-script: a correction, an unclear answer, an objection, a complaint or an unusual job.
 - The homeowner asks for a person, or the matter is urgent.
-- A booked homeowner replies to a reminder, or misses the visit. The rep marks each visit "showed" or "no-show" the same day.
+- A booked homeowner replies to a reminder, or misses the visit. The rep sets Visit Outcome on each visit the same day: held, no-show, cancelled or moved.
 - The agent did not respond, repeated itself, or said the wrong thing.
 - The follow-up ends with no decision. The quote owner sets a next date or closes the file with a reason.
 - Any new or changed message. A person approves it before a customer sees it.
 
-**The takeover play:**
-1. Add the `stop bot` tag first. A person and the agent must never message the same homeowner at once.
-2. Reply from the same business number.
-3. Log it: the date, what the agent did, what the homeowner said, and whether the lead was saved.
+**Replying vs taking over.** A reply alert means a person answers by hand. If the lead is stuck, upset or slipping away, run the takeover play instead. It lives only in agent 1, section "When a person takes over": call first, then text, then log it in the data agent's Failure Log.
 
 One takeover is good service. Three alike means the message or the rule needs fixing, not the lead.
 

@@ -60,7 +60,7 @@ To install this agent alone, type **"install my ads agent"**, or use the paste p
 5. `You + AI` **Write the shot lists.** The job list rides on every crew alert: the four shots (before, doing, after, proof) plus one extra shot the AI picks each month from that month's ad ideas. The monthly list is for the backup filming visit: 3 to 5 new ad ideas, 3 to 4 posts and the five trust videos. Every batch covers three buckets: proof (the work and the result), teach (a sign, process, tool or false fix explained) and entertain (satisfying field footage). Skip a post that fits none. You approve both lists.
    Done when: both lists are approved and cover the three buckets and the four shots.
 
-6. `You + AI` **Set up crew alerts.** You share [CLIPS FOLDER] with [CREW ALERT LIST]. The AI builds alerts 1 and 2 (CREW ALERTS in the instructions), or the way around. Film a customer only with their yes; how your team asks is your call.
+6. `You + AI` **Set up crew alerts.** You share [CLIPS FOLDER] with [CREW ALERT LIST]. The AI builds the "Film today" and "Clips missing" alerts (CREW ALERTS in the instructions), or the way around. Film a customer only with their yes; how your team asks is your call.
    Done when: the crew alert test passes and every crew member can save a clip to the folder.
 
 7. `You` **Keep the monthly filming visit as the backup,** for months with too few filmed jobs. One afternoon, 2 to 3 hours. Put the phone in one spot and mark the ground. Film a slow vertical pan before the work. Return to the same mark after. For talking videos: phone at eye level, look just past the lens, one take, keep rolling through stumbles. Film the five trust videos too.
@@ -78,7 +78,7 @@ To install this agent alone, type **"install my ads agent"**, or use the paste p
    - One path per ad: ad, then the chat, the form or the call, then the lead saved in your CRM with its ad.
    Done when: every box is checked, the Page ID (and the Dataset ID, for Messenger) is saved, and each place you will run passes its test lead.
 
-9. `You + AI` **Edit the videos.** The AI edits by the EDITING lines in the instructions, or writes a cut sheet and sends alert 3. A cut sheet lists, in order: each clip's file name, its start and end, the words on screen, the captions, and the file name to save as.
+9. `You + AI` **Edit the videos.** The AI edits by the EDITING lines in the instructions, or writes a cut sheet and sends the "Cut sheet ready" alert. A cut sheet lists, in order: each clip's file name, its start and end, the words on screen, the captions, and the file name to save as.
    Done when: one real job's clips became a video that passes the video test, by tool or by cut sheet.
 
 10. `You` **Give the AI access to the ad account.** The account's owner gives the AI the lowest access that builds ads, turns them on and off and changes budgets, without payment or admin rights if the account allows. No way in? Skip this; a person clicks as the AI directs, from here on.
@@ -87,12 +87,12 @@ To install this agent alone, type **"install my ads agent"**, or use the paste p
 11. `You + AI` **Build the campaign, switched off.** The AI builds it with access. Without access, it directs and you click.
     - One market, one service, one path. One campaign with one ad set, holding the starting nine.
     - Objective: Leads. Set to conversations for a Messenger chat (if Meta does not offer it, use Engagement set to conversations, and check each week until it appears), to an instant form for a form, or to calls for a call, as Meta offers them.
-    - The starting nine go to a short instant form. Do not change the path while you are testing ads. Messenger and call ads are added once the first nine have booked visits, each new place on [APPROVER NAME]'s yes. For call ads, set up the missed-call alert in the booking agent (agent 1, its push alerts step).
-    - Daily budget on the campaign, not the ad set, so money flows to the ads doing best. Start it at the number of ads times [MONEY PER AD A DAY]. If that would pass [MONTHLY AD BUDGET] over the month, cut no ads: send alert 6. The owner raises the budget or runs longer.
+    - The starting nine go to a short instant form. Do not change the path while you are testing ads. Messenger and call ads are added once the first nine have booked visits, each new place on [APPROVER NAME]'s yes. For call ads, set up the "Missed call from an ad" alert in the booking agent (agent 1, step 11).
+    - Daily budget on the campaign, not the ad set, so money flows to the ads doing best. Start it at the number of ads times [MONEY PER AD A DAY]. If that would pass [MONTHLY AD BUDGET] over the month, cut no ads: send the "Your call" alert. The owner raises the budget or runs longer.
     - Names a person can read later. Campaign: market, service, offer, month (for example: "Tampa - Roof Repair - Free Estimate - Mar"). Ad set: market, audience, version. Ad: problem, format, version (for example: "Ceiling Stain - Photo - V1").
     - Build the area by hand: [CITY] and the towns in [SERVICE AREAS], within [RADIUS] miles. If Meta's audience estimate is tiny, fix the area first, never with interests. Never carry over cities, states, datasets or pictures from an old campaign.
     - Audience: ages 35 to 65+, never below 30, all genders, broad. Check placements by hand. Assign the correct dataset.
-    - Turn OFF: Advantage+ creative, AI text, headline generation, Related Media, Multi-advertiser Ads, text improvements and Meta recommendations.
+    - Switch off: Advantage+ creative, AI text, headline generation, Related Media, Multi-advertiser Ads, text improvements and Meta recommendations.
     - Paste the approved words. Use real photos or job video from the same service. Check the services listed are ones you sell. Check that no private notes, customer details or claims you cannot back up slipped in.
     - Never aim at raw leads or clicks.
     - Instant form: one buying question, full name, phone, email, ZIP code. Ask for the street address only when lead quality, not volume, is your problem. Sorting questions that close the form on a "no": Do you own the home? Are you looking to fix this within the next three months? Leave the budget question off at launch. Only people who pass count as leads.
@@ -102,10 +102,10 @@ To install this agent alone, type **"install my ads agent"**, or use the paste p
 12. `You + AI` **Check the path from each ad.** Tap an ad preview. Messenger chat: the first reply starts fast and asks one easy thing; zip code is cleanest, since it confirms the service area first. Instant form: it asks only the fields above and closes on a "no". Phone call: it rings your business line. Add no giveaway or extra automation in front of any of them. The path is ready when a homeowner can tap the ad, land in your CRM with its ad name, and get a fast first reply. Nobody retypes a form or chat lead by hand.
     Done when: the path check in the test list passes.
 
-13. `You + AI` **Run one test lead, then launch on a yes.** Use an ad preview as your own test contact: message it, fill in its form, or call it. When all six test lead checks pass, the AI sends alert 4 for each ad. On [APPROVER NAME]'s yes, it turns the campaign on, or tells you which switch to click. Later ads follow LAUNCHING in the instructions.
+13. `You + AI` **Run one test lead, then launch on a yes.** Use an ad preview as your own test contact: message it, fill in its form, or call it. When all six test lead checks pass, the AI sends the "New ad to approve" alert for each ad. On [APPROVER NAME]'s yes, it turns the campaign on, or tells you which switch to click. Later ads follow LAUNCHING in the instructions.
     Done when: all six checks pass, [APPROVER NAME] said yes, and the campaign is on.
 
-14. `You + AI` **Set up the spend rules.** If your ad account offers a spending limit, the person who handles payment sets one as a backstop each month. The AI sets the morning spend check and logs each change in the data agent's Decision Log (file 05), or its own log. It starts in practice mode: alert 5 for each change it would make, and no change.
+14. `You + AI` **Set up the spend rules.** If your ad account offers a spending limit, the person who handles payment sets one as a backstop each month. The AI sets the morning spend check and logs each change in the data agent's Decision Log (file 05), or its own log. It starts in practice mode: an "Ad spend change" alert for each change it would make, and no change.
     Done when: the spend tests pass and [APPROVER NAME] says the practice alerts are right and it may start.
 
 15. `You + AI` **Keep the weekly rhythm.** About an hour a week. Post 2 to 3 Reels (short videos). Read the chats, form answers and call notes for new words homeowners use. Read the week's spend changes in the log. Keep a phone note of every homeowner question. That is your content calendar.
@@ -127,7 +127,8 @@ Posts: you draft them. A person posts them.
 Send alerts through [ALERT CHANNEL], only inside [ALERT HOURS].
 An alert due outside those hours waits until they open.
 PRACTICE MODE: until [APPROVER NAME] says start, launch nothing and
-change no spend. Send each alert 5 as "Would change:" instead.
+change no spend. Send each "Ad spend change" alert as "Would
+change:" instead.
 
 FACTS (use only these; ask if one is missing)
 Starting point: [ONE AREA] / [ONE PROBLEM] / [ONE SERVICE] / [ONE OFFER] / [ONE NEXT STEP]
@@ -155,8 +156,9 @@ RULES FOR VIDEO
 5. One plain next step: say the button out loud, "Tap Get Quote below." (Send Message on a Messenger ad, Call Now on a call ad.)
 
 CREW ALERTS
-Each morning, alert 1 for every job on the day's schedule. The day
-after, alert 2 if that job has no clips in [CLIPS FOLDER].
+Each morning, send "Film today" for every job on the day's schedule.
+The day after, send "Clips missing" if that job has no clips in
+[CLIPS FOLDER].
 Never film a customer, their house number or their kids without the
 customer's yes.
 
@@ -164,19 +166,20 @@ EDITING
 From the clips: order the shots into the four beats, trim, put the
 opening line on screen, burn in captions, keep before and after pairs
 together, export vertical. Name the file the way the ad will be named.
-No editing tool: write a cut sheet and send alert 3.
+No editing tool: write a cut sheet and send "Cut sheet ready".
 
 EVERY MONTH
 Write the monthly shot list: 3 to 5 new ad ideas, 3 to 4 posts, the 5 trust videos, the four shots.
 Cover three buckets: proof, teach, entertain. Cut any post that fits none.
-Update the extra shot on alert 1.
+Update the extra shot on the "Film today" alert.
 Count new ads this month. If too few jobs were filmed, tell [APPROVER NAME] it is time for the backup filming visit.
 
 LAUNCHING
 Build each new ad switched off, in the approved campaign, beside the old
-ads. Send alert 4. Turn it on only after [APPROVER NAME]'s yes.
+ads. Send "New ad to approve". Turn it on only after
+[APPROVER NAME]'s yes.
 Never edit a live ad set. Duplicate it and change the copy, as a new
-ad through alert 4.
+ad through "New ad to approve".
 
 TESTING
 Start with about nine ads in one ad set: three angles in three formats.
@@ -195,7 +198,7 @@ Never run only one or two ads and call the channel a failure.
 One to three ads taking most of the spend is normal.
 Judge only on booked appointments and their cost, never cost per lead,
 clicks or views. Aim for at least three live ads that have each booked.
-When an ad wears out or is turned off, draft the next from a real
+When an ad wears out or is paused, draft the next from a real
 homeowner question, the winning angle or a base ad.
 
 AD SPEND RULES (each morning)
@@ -204,12 +207,12 @@ data agent's Scoreboard rows for each ad (file 05), or the office's
 counts. Add up the last three weekly rows for a 21-day view.
 The line is [COST PER APPOINTMENT LINE].
 1. First 7 days of an ad: do not judge it. Only check for no spend,
-   rejected or wrong link. If so, send alert 6.
+   rejected or wrong link. If so, send "Your call".
 2. After 21 days, put each ad in one pile:
    KEEP: 3 or more booked appointments, each at or under the line.
-   OFF: spent 3 times the line or more, booked nothing. Turn it off.
+   PAUSE: spent 3 times the line or more, booked nothing. Pause it.
    NOT TESTED YET: spent less than the line. Give it a second round.
-3. The budget sits on the campaign, so an ad turned off sends its money
+3. The budget sits on the campaign, so a paused ad sends its money
    to the ads still on.
 4. Campaign cost per booked appointment over the last 21 days at or
    under the line: raise the budget about 20%, at most once every
@@ -217,20 +220,20 @@ The line is [COST PER APPOINTMENT LINE].
 5. Over the line: cut about 20%, wait two days, look again before
    changing any ad.
 6. Daily budget per live ad under [MONEY PER AD A DAY]: do not cut ads
-   to fit. Send alert 6.
-7. Slow month: never turn every ad off. Send alert 6.
+   to fit. Send "Your call".
+7. Slow month: never pause every ad. Send "Your call".
 8. Never rebuild after one bad week. Never widen the area because calls
-   dip. Turn ads off; never delete one that has spent.
-Change nothing and send alert 6 when: an ad has no Booked count, fits
+   dip. Pause ads; never delete one that has spent.
+Change nothing and send "Your call" when: an ad has no Booked count, fits
 no pile, or these rules and the data agent's Friday review disagree.
 Log every change (date, what, before, after, rule, numbers) and send
-alert 5. On UNDO from [APPROVER NAME], reverse it and log that.
+"Ad spend change". On UNDO from [APPROVER NAME], reverse it and log that.
 
 HARD STOPS (whatever a rule says)
 - Month's spend never passes [MONTHLY AD BUDGET]. Before a raise, add
   this month's spend to the new daily budget times the days left. Too
   high: no raise. Each morning, if real spend is on track to pass,
-  lower the daily budget and send alert 5.
+  lower the daily budget and send "Ad spend change".
 - No new audience, area, offer, service or campaign without
   [APPROVER NAME]'s yes.
 - Never change a live ad's words or picture.
@@ -287,7 +290,7 @@ Button: Get Quote (Send Message on a Messenger ad, Call Now on a call ad)
 ### Alerts to your team
 Each is a team alert, your AI may adjust the wording. All go through [ALERT CHANNEL], inside [ALERT HOURS]. If replies cannot reach the AI that way, [APPROVER NAME] types YES or UNDO into the AI assistant.
 
-**Alert 1. Film today.** To [CREW ALERT LIST], each job morning.
+**Film today.** To [CREW ALERT LIST], each job morning.
 
 ```
 Film today:
@@ -301,7 +304,7 @@ Extra: [EXTRA SHOT].
 Send clips to [CLIPS FOLDER] after the job.
 ```
 
-**Alert 2. Clips missing.** To [CREW ALERT LIST], the day after a job with no clips.
+**Clips missing.** To [CREW ALERT LIST], the day after a job with no clips.
 
 ```
 No clips yet
@@ -309,7 +312,7 @@ from [JOB ADDRESS] ([DATE]).
 Send them to [CLIPS FOLDER] today.
 ```
 
-**Alert 3. Cut sheet ready.** To [EDITOR NAME], only without an editing tool.
+**Cut sheet ready.** To [EDITOR NAME], only without an editing tool.
 
 ```
 Cut sheet ready
@@ -317,7 +320,7 @@ for [VIDEO NAME].
 Save the finished video to [CLIPS FOLDER] as [FILE NAME].
 ```
 
-**Alert 4. New ad to approve.** To [APPROVER NAME], every new ad.
+**New ad to approve.** To [APPROVER NAME], every new ad.
 
 ```
 New ad ready:
@@ -329,7 +332,7 @@ Reply YES to launch.
 It stays off until you do.
 ```
 
-**Alert 5. Ad spend change.** To [APPROVER NAME], every change. In practice mode it starts "Would change:" and nothing changes.
+**Ad spend change.** To [APPROVER NAME], every change. In practice mode it starts "Would change:" and nothing changes.
 
 ```
 Ad change:
@@ -339,7 +342,7 @@ Spent this month: [SPENT] of [MONTHLY AD BUDGET].
 Reply UNDO to reverse.
 ```
 
-**Alert 6. Your call.** To [APPROVER NAME], when a rule cannot decide or a hard stop is hit.
+**Your call.** To [APPROVER NAME], when a rule cannot decide or a hard stop is hit.
 
 ```
 Your call:
@@ -352,7 +355,7 @@ Nothing has been changed.
 Run these before a customer sees anything. None spends real money: ads stay off, and the spend rules run in practice mode on made-up numbers.
 
 - **Words:** each ad passes step 4's "Done when", opens on the homeowner's problem, and has no blank left.
-- **Starting nine:** three angles in three formats, all off in one ad set. Set a made-up [MONTHLY AD BUDGET] too small for the starting budget: alert 6 comes, and no ad is cut.
+- **Starting nine:** three angles in three formats, all off in one ad set. Set a made-up [MONTHLY AD BUDGET] too small for the starting budget: the "Your call" alert comes, and no ad is cut.
 - **Video:** problem shown in the first 2 seconds, real job, one next step, captions on, file named like the ad.
 - **Shots:** before and after come from the same mark; the batch covers the three buckets.
 - **Page:** the name matches your website and Google letter for letter, with no claims, all caps or emojis. Every profile field in step 8 is filled. A new page has 3 to 5 posts spread over a few days.
@@ -366,12 +369,12 @@ Run these before a customer sees anything. None spends real money: ads stay off,
   4. The first reply went out, from your booking agent or from the person on duty. For a call, a person answered during [PHONE HOURS].
   5. A task for your team was created at the right stage.
   6. The no-answer follow-up is ready: your follow-up agent is armed, or a person has the lead on a list.
-- **Crew alert:** only you on [CREW ALERT LIST], a test job today. Alert 1 arrives inside [ALERT HOURS]; one due outside them waits. With no clips and a shortened wait, alert 2 arrives. Put the crew back.
+- **Crew alert:** only you on [CREW ALERT LIST], a test job today. "Film today" arrives inside [ALERT HOURS]; one due outside them waits. With no clips and a shortened wait, "Clips missing" arrives. Put the crew back.
 - **Editing:** practice clips in [CLIPS FOLDER] become a video that passes the video test, or a cut sheet [EDITOR NAME] follows without a question.
-- **Launch:** a test ad, built off, reaches [APPROVER NAME] as alert 4 with a working preview. NO or no answer: it stays off. YES in practice mode: the AI says what it would turn on, and turns nothing on.
+- **Launch:** a test ad, built off, reaches [APPROVER NAME] as a "New ad to approve" alert with a working preview. NO or no answer: it stays off. YES in practice mode: the AI says what it would turn on, and turns nothing on.
 - **Access:** the AI cannot reach payment or admin rights, or PROGRESS.md notes the account cannot block them.
-- **Spend rules, practice mode:** made-up Scoreboard rows (Spend, Booked) covering 21 days for nine ads, with at least one in each pile. Alert 5 names only the OFF ads. A first-week ad with no spend, and an ad with no Booked count, each get alert 6. Each "would change" has a log row.
-- **Hard stops, practice mode:** a raise past [MONTHLY AD BUDGET], a new town, a new offer, a payment change: each refused with alert 6. UNDO on a practice change shows as reversed in the log.
+- **Spend rules, practice mode:** made-up Scoreboard rows (Spend, Booked) covering 21 days for nine ads, with at least one in each pile. "Ad spend change" names only the PAUSE ads. A first-week ad with no spend, and an ad with no Booked count, each get "Your call". Each "would change" has a log row.
+- **Hard stops, practice mode:** a raise past [MONTHLY AD BUDGET], a new town, a new offer, a payment change: each refused with "Your call". UNDO on a practice change shows as reversed in the log.
 
 ## When a person takes over
 - Every new ad and post waits for [APPROVER NAME]'s yes. No answer means it stays off.

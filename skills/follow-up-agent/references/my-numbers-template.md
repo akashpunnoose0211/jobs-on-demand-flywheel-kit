@@ -19,7 +19,7 @@ Fill in every line. Guesses are fine to start. Mark a guess `(guess)` and replac
 - What you call the first visit, and whether it is free (for example: free inspection, estimate, service call):
 - Booking link (or "none"):
 - Towns or areas you do NOT serve:
-- Hours when no text should go out (quiet hours):
+- Hours when no text should go out (quiet hours). The first reply to a brand-new lead is the one exception; it goes out at any hour:
 - Who approves new wording before a customer sees it:
 
 ## How work comes in today

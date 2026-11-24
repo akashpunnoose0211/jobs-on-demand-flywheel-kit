@@ -38,7 +38,7 @@ What it does not do: it never messages customers, and never changes a live ad, a
 - A password manager, to hold every key and password.
 
 ## How to install it
-To install this agent alone, type **"install my data agent"**, or use the paste prompt at the end of `INSTALL-GUIDE.md`.
+To install this agent alone, type **"install my data agent, part 1"** (later, **"part 2"**), or use the paste prompt at the end of `INSTALL-GUIDE.md`.
 
 ## Step by step
 
@@ -62,7 +62,7 @@ To install this agent alone, type **"install my data agent"**, or use the paste 
    No "Copy of Copy of" stays live. Each new contact gets stamped with the source, the campaign and the exact ad, using short labels at the end of each ad link. An ad that opens a Messenger chat has no link: the source comes from the ad details your customer software saves with the conversation. An instant form passes the ad name with the form. A call comes in on the tracking number for Meta ads, if you use one. (The ads agent, file 04, its page and tracking step.) Also save the customer's first message.
    Done when: a test lead from each live ad shows the source, the campaign and the exact ad on its contact. The lasting proof comes later: pick any job sold after tracking went live and name the exact ad behind it in under 60 seconds.
 
-4. `You + AI` **Give every lead a record from first source to dollars.** AI adds four fields to each contact: Visit Date, Visit Outcome (held / no-show / cancelled / moved), Signed Date and Signed Amount. It reuses the other agents' fields, or creates them here if you skipped that agent. Every field gets one filler:
+4. `You + AI` **Give every lead a record from first source to dollars.** AI adds four fields to each contact: Visit Date, Visit Outcome (held / no-show / cancelled / moved), Signed Date and Signed Amount. Visit Outcome is the follow-up agent's field (file 02, day 5). Reuse it; create it here only if you skipped that agent. The same goes for the other agents' fields. Every field gets one filler:
 
    | Field | Filled by | When |
    |---|---|---|
@@ -76,7 +76,7 @@ To install this agent alone, type **"install my data agent"**, or use the paste 
 
    Done when: every field exists on your test contact, each has a named filler, and a test booking fills Visit Date.
 
-5. `AI` **Build the missing-outcome alert.** One automation in your customer tool. At [OUTCOME CHECK TIME] each day, for every visit today with Visit Outcome empty, it sends alert 6 to the sales rep on that visit. No Outcome Yet counts the visits still empty. With the fallback, it makes a task for the rep (or a row on a shared list, if your tools have no tasks), checked daily by a named person.
+5. `AI` **Build the missing-outcome alert.** One automation in your customer tool. At [OUTCOME CHECK TIME] each day, for every visit today with Visit Outcome empty, it sends the "No-outcome alert" to the sales rep on that visit. It uses the follow-up agent's Visit Outcome field, not a second one. No Outcome Yet counts the visits still empty. With the fallback, it makes a task for the rep (or a row on a shared list, if your tools have no tasks), checked daily by a named person.
    Done when: your test contact, booked for today with no outcome, gets the alert to your own phone at the check time (for the test, set the time a few minutes ahead). A test contact whose outcome is filled first gets none.
 
 6. `You + AI` **Run the Friday review.** Every Friday at [REVIEW TIME], 20 minutes. A scoreboard week runs from one review to the next.
@@ -89,8 +89,9 @@ To install this agent alone, type **"install my data agent"**, or use the paste 
 7. `You + AI` **Set the trend alerts.** You write a floor in MY-NUMBERS.md for each number you want watched. The AI copies the watch list into the Definitions tab: each number, which way is worse, its floor and a named person. Each Friday the AI checks the trend rule, logs each alert and puts it at the top of the Friday draft. If it can send on [ALERT CHANNEL], it sends each alert to [NUMBERS ALERT LIST]; if not, you forward it.
    Done when: on three made-up weeks, a number that got worse twice gives the two-week alert, a number under its floor gives the floor alert, steady numbers give none, and each alert is in the Alert Log.
 
-8. `You + AI` **Start the Failure Log.** AI builds the tab. Columns: Date, Lead source, What the agent did, What the customer said, What was missing or wrong, What a person did, Was the lead saved, Fix needed.
-   Done when: the tab exists and every failure this week has a row that names the exact failure.
+8. `You + AI` **Start the Failure Log.** AI builds the tab. This is the kit's one log; no other agent keeps its own. Columns: Date, Lead, Who took over, Lead source, What the agent did, What the customer said, What was missing or wrong, What a person did, Was the lead saved, Fix needed.
+   - Every takeover from the booking agent (file 01) or the follow-up agent (file 02) gets a row here.
+   Done when: the tab exists and every failure and takeover this week has a row that names the exact failure.
 
 **Part 2: your own database**
 
@@ -234,7 +235,8 @@ WHERE THE LEAK IS
 Never solve a booking problem with more ads.
 
 FAILURES
-Log each failure with the exact thing that went wrong. One failure:
+Log each failure with the exact thing that went wrong. Every takeover
+from the booking or follow-up agent also gets a row. One failure:
 a person rescues it and moves on. Three alike: tell [OWNER NAME] it needs
 a root cause this week.
 ```
@@ -282,7 +284,7 @@ This needs a root cause this week.
 ### Alerts to your team
 Each is a team alert, your AI may adjust the wording. Each goes through [ALERT CHANNEL], inside [ALERT HOURS]. One outside those hours waits and goes out first thing.
 
-**4. Number getting worse two weeks in a row.** To [NUMBERS ALERT LIST]. Team alert, your AI may adjust the wording.
+**4. "Two-week alert": a number got worse two weeks in a row.** To [NUMBERS ALERT LIST]. Team alert, your AI may adjust the wording.
 
 ```
 Numbers alert:
@@ -291,7 +293,7 @@ Was [LAST WEEK], now [THIS WEEK].
 Check first: [ONE THING TO CHECK].
 ```
 
-**5. Number below its floor.** To [NUMBERS ALERT LIST]. Team alert, your AI may adjust the wording.
+**5. "Floor alert": a number is past its floor.** To [NUMBERS ALERT LIST]. Team alert, your AI may adjust the wording.
 
 ```
 Numbers alert:
@@ -300,7 +302,7 @@ below your floor of [FLOOR].
 Check first: [ONE THING TO CHECK].
 ```
 
-**6. Visit with no outcome.** To the sales rep on that visit ([REP NAME]), at [OUTCOME CHECK TIME] on the day of the visit. Team alert, your AI may adjust the wording.
+**6. "No-outcome alert": a visit with no outcome.** To the sales rep on that visit ([REP NAME]), at [OUTCOME CHECK TIME] on the day of the visit. It reads the follow-up agent's Visit Outcome field. Team alert, your AI may adjust the wording.
 
 ```
 No outcome yet:
@@ -326,6 +328,7 @@ Use only made-up test leads on your own test contact (or copies), each with a di
 | Change a floor in MY-NUMBERS.md, then re-check the same week | The alert follows the new floor |
 | Give Show rate a test floor, leave one test visit with no outcome, and type a week under that floor | The alert's one thing to check is recording that visit |
 | Type made-up rows for three ads after 21 days: one booked 3 under the line, one spent 3 times the line with none, one spent under the line | The Friday draft calls them keep, pause and not tested yet, the same piles the ads agent's practice run gives |
+| Hand one test lead from the booking agent to a person | One Failure Log row, with Who took over and Was the lead saved filled |
 | Pick any job sold after tracking went live | You name the exact ad in under 60 seconds |
 | Change your test contact in your customer software | Its row updates in the database within one 15-minute cycle |
 | Compare yesterday's ad spend | Database matches the ad account to the cent |
@@ -335,7 +338,7 @@ Use only made-up test leads on your own test contact (or copies), each with a di
 | Check the safety rules | Backups scheduled, no shared passwords, one named owner |
 
 ## When a person takes over
-- **Every Friday call.** The agent drafts. [OWNER NAME] decides on fixes and new ads. The agent never changes a live ad or budget; turning ads off and moving spend is the ads agent's job, by its own rules.
+- **Every Friday call.** The agent drafts. [OWNER NAME] decides on fixes and new ads. The agent never changes a live ad or budget; pausing ads and moving spend is the ads agent's job, by its own rules.
 - **What happened at a visit.** Only the sales rep records it. The agent reminds, and never fills it in.
 - **The signed amount.** [SALES OWNER] types it. If it differs from the invoice, a person decides which is right.
 - **A numbers alert.** The person on [NUMBERS ALERT LIST] checks the data first, then picks the fix. Never blame a person over a number nobody has checked.

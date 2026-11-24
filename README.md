@@ -26,7 +26,7 @@ Then say **"start the flywheel kit"**.
 **2. Paste a link into Claude or Codex.** Paste this, and say "save these as skills":
 
 ```
-https://github.com/akashpunnoose0211/jobs-on-demand-flywheel-kit/tree/v1.1.0/skills
+https://github.com/akashpunnoose0211/jobs-on-demand-flywheel-kit/tree/v1.2.0/skills
 ```
 
 Then say **"start the flywheel kit"**.
@@ -39,6 +39,7 @@ Then say **"start the flywheel kit"**.
 - `MY-NUMBERS.md`: your business facts. Your AI fills it in with you on day 1.
 - `setup/`: beginner guides for Claude Code and GoHighLevel, and for getting your texting approved the first time.
 - `agents/`: one file per agent, `01` to `05`, with every step, message and test.
+- `cheat-sheets/`: a card for your team (what to do when each alert lands) and one for you (what to type, and your weekly rhythm).
 - `skills/`: the same guides as installable skills, one per agent, plus `flywheel-kit-start`.
 
 Nothing here sends a message, spends money or goes live by itself. Every agent is built in draft and tested on your own phone, and nothing reaches a customer until you say yes.

@@ -86,15 +86,18 @@ Privacy Policy ([WEBSITE]/privacy) · Terms ([WEBSITE]/terms)
 [BUSINESS NAME] is a [TRADE] company serving homeowners in [SERVICE AREA]. This campaign texts people who asked us for a quote or booked a visit on our website form at [WEBSITE]/[FORM PAGE]. Texts reply to new requests, book estimates and send appointment reminders. They also follow up on quotes we sent and check in after a job with a review request. Customers who tick our separate offers box get occasional promotions. We only text people who opted in.
 ```
 
-**E. Sample messages (paste the ones you'll really send)**
+**E. Sample messages (copy them from your agents)**
+Reviewers compare your samples with the texts you really send. These are the kit's own messages, from the agent files, with your business name and the opt-out line added. Change them if you changed your agents' wording.
 ```
-Booking reply: Hi [FIRST NAME], this is [AGENT NAME] with [BUSINESS NAME]. Thanks for your request about [SERVICE]. What day works for a free estimate this week? Reply STOP to opt out.
+Booking reply (booking agent): Hey [FIRST NAME], it's [REP NAME] with [BUSINESS NAME]. Got your request about the [VISIT NAME]. I'm going to call you in the next couple minutes from [BUSINESS PHONE] so it's not a random number. If now's bad, just text me a better time. Reply STOP to opt out.
 
-Appointment reminder: [BUSINESS NAME]: Hi [FIRST NAME], a reminder of your estimate on [DATE] at [TIME]. Reply YES to confirm or call [BUSINESS PHONE] to change it. Reply STOP to opt out.
+Visit confirmation (follow-up agent): Hi [FIRST NAME], it's [BUSINESS NAME]. You're booked for your [VISIT NAME] on [DATE] at [TIME]. Does that time still work? Reply STOP to opt out.
 
-Quote follow-up: Hi [FIRST NAME], it's [REP NAME] from [BUSINESS NAME]. Any questions about the quote we sent for [SERVICE]? Happy to walk you through it. Reply STOP to opt out.
+Quiet lead follow-up (follow-up agent): [BUSINESS NAME]: Still want me to take a look at [THE PROBLEM THEY DESCRIBED]? I've got [DAY] morning or [DAY] afternoon open. Reply STOP to opt out.
 
-Review request: Hi [FIRST NAME], thanks for choosing [BUSINESS NAME]. How did the job go? If we earned it, a quick review helps a lot: [FULL REVIEW LINK]. Reply STOP to opt out.
+After-job check-in (reviews agent): Hi [FIRST NAME], it's [NAME] with [BUSINESS NAME]. I wanted to make sure yesterday's [PROJECT] was finished cleanly. Is everything looking and feeling right? Reply STOP to opt out.
+
+Review ask (reviews agent): [BUSINESS NAME]: Glad everything landed the way it should. Would you mind sharing an honest review? [DIRECT REVIEW LINK] Reply STOP to opt out.
 
 Offer (only if you send offers): [BUSINESS NAME]: [OFFER] for past customers through [DATE]. Reply BOOK to grab a spot. Reply STOP to opt out.
 ```
@@ -115,7 +118,7 @@ HELP reply: [BUSINESS NAME]: For help, call [BUSINESS PHONE] or email [BUSINESS 
 
 Opt-out words: STOP, STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT
 Help words: HELP, INFO
-Opt-in words: START, YES, UNSTOP
+Opt-in words: START, UNSTOP (leave YES off: your agents ask yes-or-no questions, and a "yes" should not trigger a sign-up reply)
 ```
 
 ## Why approvals get rejected
@@ -146,4 +149,4 @@ Not allowed at all: selling leads to other businesses, lending, debt collection,
 - **Hold off on ads that bring in text leads.** Leads that arrive now can't get a text back. Call them instead.
 - **Don't work around it** by blasting texts from your personal phone. Carriers can flag and block your numbers.
 
-Done when: your brand and campaign are approved and your number shows **A2P Verified**. Then go back to `SETUP-GOHIGHLEVEL.md` (in this folder) and finish its steps.
+Done when: your brand and campaign are approved and your number shows **A2P Verified**. You don't wait for this to keep going: once it's submitted, carry on with `SETUP-GOHIGHLEVEL.md` (in this folder) from step 6.

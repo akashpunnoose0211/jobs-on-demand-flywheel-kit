@@ -19,6 +19,7 @@
 | `MY-NUMBERS.md` | Your business facts, filled in once. Every agent reads it. | Day 1, with your AI. |
 | `setup/` | Beginner guides: Claude Code, GoHighLevel, and getting your texting approved. | Day 1, only if you need them. |
 | `agents/` | One file per agent: every step, message and test. | Your AI opens these for you, one a day. |
+| `cheat-sheets/` | Two printable cards: one for your team (what to do when each alert lands), one for you (what to type, and your weekly rhythm). | When you go live. Print the team card for everyone on an alert list. |
 | `skills/`, `CLAUDE.md`, `AGENTS.md`, `.claude-plugin/` | Instructions your AI reads, so "start" just works. | Never. Leave them as they are. |
 | `PROGRESS.md` | Your AI's checklist of what's done. It appears on day 1. | Any time you ask "what's next?". |
 

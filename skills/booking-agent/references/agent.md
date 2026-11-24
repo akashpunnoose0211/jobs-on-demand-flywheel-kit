@@ -19,7 +19,7 @@ This agent works by text and message. When a lead goes quiet, the follow-up agen
 - **A customer tool (CRM) with admin access that can do four things:** answer Facebook messages and texts by itself from instructions you paste in; keep fields and tags on each contact; run automations that start when a tag is added, including a step that reads the conversation and fills in fields; and create tasks for a person. Your AI assistant checks this before step 1 and tells you if yours can't.
 - **A way for an automation to send a push alert to your team's phones,** with no person pressing send: your customer tool's own phone app notice, a text to each team member, or your team's chat app. If none works, step 10 gives the slower fallback.
 - **If you run call ads (agent 4):** a phone tool that can tell an automation a call to the call ads' tracking number went unanswered. If it can't, a person checks that number's missed calls instead (step 11).
-- From MY-NUMBERS.md: [ALERT CHANNEL], [SALES ALERT LIST], [ALERT HOURS] (under "Alerts and ad spend"), and [PHONE HOURS], the hours a person answers the phone.
+- From MY-NUMBERS.md: [ALERT CHANNEL], [SALES ALERT LIST], [ALERT HOURS] (under "Alerts and ad spend"), [PHONE HOURS], the hours a person answers the phone, and [QUIET HOURS], the hours no text goes out.
 - Your Facebook page (and Instagram, once connected) linked to that tool.
 - One real phone line, approved for business texting. Texts and calls come from that same number. Until it is approved, no automatic text goes out.
 - A real calendar showing only the times your sales rep will keep.
@@ -54,6 +54,8 @@ To install this agent alone, type **"install my booking agent"**, or use the pas
    - **Polite close:** the agent ends a bad fit. Turn the agent off for that contact, tag `ai dq`, move to Out of Area or Out of Scope.
    - **Form lead fast reply:** a form lead arrives with a phone number (from your website, or from an ad's instant form). Inside [PHONE HOURS], send the instant text and create the first call task, due within 5 minutes. Outside [PHONE HOURS], send the after-hours text instead, and make the first call task due when [PHONE HOURS] start. Either way, create the second call task 1 hour after the first is due. Send the missed-call text 5 minutes after the caller marks the first call "no answer". Your AI assistant sets up that mark (a tag or a task result). Tag `booked` stops everything.
 
+   **Quiet hours.** The first reply to a brand-new lead is the one exception to [QUIET HOURS]: it may go out at any hour. That is the instant text, the after-hours text, or the agent's first reply. Every later text respects [QUIET HOURS]. If one falls inside them, it waits until they end.
+
    Done when: all six exist in draft.
 9. `AI` **Make the hand-off check the last step of auto hand-off.** Yes: tag `transferred`, move to Transferred, put the team note below on the contact. No: tag `needs review`, move to Needs Review. Done when: a lead with a missing or junk field goes to Needs Review, never to the sales rep.
 10. `You + AI` **Choose how alerts reach your team's phones.** Fill in [ALERT CHANNEL], [SALES ALERT LIST] and [ALERT HOURS] in MY-NUMBERS.md. Your AI assistant picks the first of the three ways under "What you need" that your tool can send. Agree who on [SALES ALERT LIST] calls first; the rest are backup. Set [ALERT HOURS] to start no later than [PHONE HOURS], so an alert lands before its call is due.
@@ -67,7 +69,7 @@ To install this agent alone, type **"install my booking agent"**, or use the pas
     - **Manual hand-off:** "Lead handed over" is its notice to the sales rep.
     - **Not called yet:** 5 minutes after a new-lead alert goes out, if the first call task is not marked "called" or "no answer", send "Still not called", once. Set up "called" like "no answer". On a message lead, neither mark sends a text. Tag `booked` cancels this check.
     - **Missed call from an ad:** a call to the tracking number for your call ads (agent 4) is not answered. Send "Missed call from an ad" with the caller's number. Nothing goes to the homeowner. Your AI assistant checks whether your phone tool can tell an automation a call was missed. If it can't, a person checks that number's missed calls each time they work the task list during [ALERT HOURS], and puts each one on the daily list. This covers calls from an ad only; other missed calls to your business line still get nothing from this kit.
-    - **Alert hours:** outside [ALERT HOURS], hold each alert until they start. The 5-minute check counts from when the alert goes out or the call is due, whichever is later. Texts and replies never wait.
+    - **Alert hours:** outside [ALERT HOURS], hold each alert until they start. The 5-minute check counts from when the alert goes out or the call is due, whichever is later. Alert hours never hold a text. The first reply to a new lead never waits; later texts wait out [QUIET HOURS].
     The team notes stay on the contact or the call task; the alert is the short notice to phones. Done when: every alert above is in draft, in the automation it belongs to, and no notice is sent twice.
 12. `You + AI` **Run the test list.** Switch the agent and all its automations on for your test contact only (test mode, or a filter that lets only it through). Your AI assistant checks tags, stage, fields and alerts after each test. Done when: every test passes.
 13. `You + AI` **Go live.** Delete test contacts, take off the filter, put the full team back on [SALES ALERT LIST]. On your final yes, publish them all. Done when: a real lead goes from first message to a clean hand-off, and its alert lands on the team's phones.
@@ -94,6 +96,10 @@ Never quote a price. Never diagnose. Never make up business details
 the question-and-answer list or pass it to the sales rep. There is
 no third option. Never ask again for something already given.
 
+QUIET HOURS
+Your first reply to a brand-new lead may go out at any hour. After
+that, send no text during [QUIET HOURS]. Wait until they end.
+
 FACTS
 Business: [BUSINESS NAME]
 Phone: [BUSINESS PHONE]
@@ -103,6 +109,7 @@ Problems we fix: [PROBLEMS YOU FIX]
 Jobs we do not take: [JOBS YOU DO NOT TAKE]
 Areas served: [SERVICE AREAS]
 Areas not served: [AREAS YOU DO NOT SERVE]
+Quiet hours: [QUIET HOURS]
 
 INTERESTED LEAD
 "We can help! Send your zip code and best phone number and I'll set
@@ -219,7 +226,7 @@ The agent's conversation lines are word for word in its instructions above. Thes
 - **The moment a person takes over, details still missing (typed by a person):** "Hey [FIRST NAME], jumping in here so we can make sure this gets handled correctly. Can you send me the best phone number and zip code for the property?"
 - **The moment a person takes over, details already given (typed by a person):** "Got it, thanks. I have [JOB TYPE] in [CITY OR ZIP]. I'm getting this to the right person so they can help with the next step."
 
-Both calls are tasks, from the same number as the texts (timing in step 8). Send the missed-call text only after the first call was really made. The follow-up agent (agent 2) adds two more texts, 1 day and 3 days later, and the alert for the second call. A person approves any new or changed wording first. A person sends a takeover text only after a call goes unanswered, or when there is no phone yet.
+Both calls are tasks, from the same number as the texts (timing in step 8). Send the missed-call text only after the first call was really made. The follow-up agent (agent 2) adds two more texts, 1 day and 3 days later, and the "Follow-up call due" alert for the second call. A person approves any new or changed wording first. A person sends a takeover text only after a call goes unanswered, or when there is no phone yet. Only the first two texts above may go out during [QUIET HOURS]; the rest wait until they end.
 
 **Note to your team on a pass:** "NEW QUALIFIED LEAD: [BUSINESS NAME]. Name: [NAME]. Phone: [PHONE]. Zip: [ZIP] (in area). Job: [JOB TYPE]. Notes: [WHAT THE CUSTOMER SAID]. Prefers: [CONTACT PREFERENCE]."
 
@@ -285,7 +292,7 @@ Missed call from an ad:
 Call back now.
 ```
 
-Outside [ALERT HOURS], the texts and the agent's replies still go out at once. The alerts wait until the hours start.
+Outside [ALERT HOURS], the alerts wait until the hours start. Texts never wait for alert hours. The first reply to a brand-new lead goes out at once, at any hour. Every later text waits until [QUIET HOURS] end.
 
 ## Test list
 Message your own page from a personal account. Only your phone is on [SALES ALERT LIST]. Run every test inside [PHONE HOURS] and [ALERT HOURS], except test 14. With the fallback, "alert lands" reads "a task due at once appears".
@@ -306,8 +313,9 @@ Message your own page from a personal account. Only your phone is on [SALES ALER
 14. **After hours.** Set [PHONE HOURS] and [ALERT HOURS] to start a few minutes from now, then send a test form lead. Pass: the after-hours text goes out at once, with no alert. When the hours start, the alert lands, the first call is due, and the 5-minute check counts from then. Then set [ALERT HOURS] to open earlier than [PHONE HOURS]: "Still not called" waits until 5 minutes after the call is due. Put the real hours back.
 15. **Manual hand-off.** Submit the Lead Transfer form for your test contact. Pass: tag `transferred`, and the "Lead handed over" alert lands.
 16. **Missed call from an ad** (only if you run call ads). Call the call ads' tracking number from your own phone and let it ring out. Pass: "Missed call from an ad" lands with your number, once, and nothing is sent to your phone as a homeowner. With no missed-call signal, pass: the person on duty finds it on the missed-call list and it goes on the daily list.
-17. **Takeover.** While the agent is mid-conversation with your test contact, run the takeover. Pass: after `stop bot`, no agent or follow-up message arrives. The call comes before the text, the form tags `transferred`, and the log has every line filled in.
-18. **Takeover, bad fit and no phone.** During a takeover, give a zip you do not serve. Pass: a polite close typed by a person, tag `ai dq`, stage Out of Area, a log entry and no hand-off. Repeat, refusing a phone twice. Pass: Needs Review, and no third ask.
+17. **Takeover.** While the agent is mid-conversation with your test contact, run the takeover. Pass: after `stop bot`, no agent or follow-up message arrives. The call comes before the text, the form tags `transferred`, and the Failure Log row has every line filled in.
+18. **Takeover, bad fit and no phone.** During a takeover, give a zip you do not serve. Pass: a polite close typed by a person, tag `ai dq`, stage Out of Area, a Failure Log row and no hand-off. Repeat, refusing a phone twice. Pass: Needs Review, and no third ask.
+19. **Quiet hours.** Set [QUIET HOURS] to cover right now, then send a test form lead and mark the first call "no answer". Pass: the instant or after-hours text arrives at once. The missed-call text waits until [QUIET HOURS] end. Put the real hours back.
 
 ## When a person takes over
 A person steps in when:
@@ -324,17 +332,19 @@ When a new-lead alert lands:
 - If alerts stop landing, check [ALERT CHANNEL] and work the call task list by hand.
 - "Missed call from an ad": the first person free calls the number back now, from the business line.
 
-The takeover. Save the lead first and find the cause later. Never fix the setup while a customer waits.
+The takeover. This is the kit's one takeover play, for every agent: call first, then text. Save the lead first and find the cause later. Never fix the setup while a customer waits.
 1. `You` **Pause the agent.** Add tag `stop bot`. If the follow-up agent (agent 2) has this lead, pause it for this contact too. Add a note on the contact: "Takeover started", with the date and time. Done when: no automatic message can reach this lead.
 2. `You` **Read before you reach out.** Read the whole conversation and the contact's fields. Note what the customer already gave, and what is missing or wrong. Done when: you know what to ask for, so you never ask twice.
 3. `You` **Call first, then text.** Phone on file: call from [BUSINESS PHONE]. No answer, or no phone yet: send the matching takeover text above. Done when: you reached them, or one text is out.
 4. `You` **Collect only what is missing.** Name, phone, zip, job type, a short note and how urgent. Put the best time to call and whether they own the property in the note. No phone: ask once more. Still no: move them to Needs Review and stop asking. Done when: you have every field, or the lead is in Needs Review.
 5. `You` **Hand over, or close.** A fit: submit the manual hand-off form with the note above. Not interested: move it to Not Interested. A bad fit: close with the agent's matching close line, tag `ai dq`, and move it to Out of Area or Out of Scope. Bad fits: outside your area, a job you do not take, or a renter without the owner's OK. Also spam, a lead already in your customer software, or price shopping with no real job. Done when: the lead sits in one stage, and nobody owes it a message.
-6. `You` **Log it.** Fill in one entry in your team's shared takeover log, bad fits included. Write the exact failure, never just "the bot failed." Done when: every line is filled in.
+6. `You` **Log it.** Write one row in the data agent's Failure Log (agent 5), bad fits included. There is no separate takeover log. If agent 5 is not set up yet, start its Failure Log tab now (its step 8). Write the exact failure, never just "the bot failed." Done when: every line below is filled in on that row.
 
 ```
-TAKEOVER LOG
+FAILURE LOG ROW
 Date and time:
+Lead:
+Who took over:
 Lead source:
 What the agent did:
 What the customer said:
@@ -344,6 +354,6 @@ Lead saved? yes / no
 Fix needed:
 ```
 
-Once a week, the person who clears Needs Review reads the log. The same failure three times means fix the instructions, the question-and-answer list or the automation, not the lead.
+Once a week, the person who clears Needs Review reads the Failure Log. The same failure three times means fix the instructions, the question-and-answer list or the automation, not the lead.
 
 Want this installed for you? That is the Full Done-For-You Installation.
