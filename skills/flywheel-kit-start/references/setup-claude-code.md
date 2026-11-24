@@ -25,9 +25,9 @@
    Done when: a folder called `jobs-on-demand-flywheel-kit` sits in your Documents.
 
 5. `You` **Open the kit folder in Claude Code.** Pick that folder when the Code tab asks which folder to work in.
-   Done when: you type "what files are in this folder?" and it lists START-HERE.md, ROLLOUT-PLAN.md and the five agent files.
+   Done when: you type "what files are in this folder?" and it lists START-HERE.md, INSTALL-GUIDE.md and the agents and setup folders.
 
-6. `You` **Type "start".** Claude Code reads the kit's instructions by itself and picks up at phase 2 of the install guide (`ROLLOUT-PLAN.md`).
+6. `You` **Type "start".** Claude Code reads the kit's instructions by itself and picks up at phase 2 of the install guide (`INSTALL-GUIDE.md`, in the main kit folder).
 
 ## The other way: Claude Code in the terminal
 Use this only if you like typing commands. Everything else in the kit works the same.

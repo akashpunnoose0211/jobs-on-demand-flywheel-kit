@@ -1,18 +1,18 @@
 ---
 name: booking-agent
 description: >
-  Installs the Jobs-On-Demand Flywheel Kit's booking agent inside the owner's GoHighLevel account, step by step and in draft: it answers every new Facebook message and form lead in seconds, asks for the job, zip and phone, and alerts your sales team to call. Use whenever the owner says 'install my booking agent', 'set up the lead bot', 'answer my Facebook messages', 'speed to lead', 'qualify my leads', or asks to do days 3 and 4 of the kit's rollout plan. Do NOT use for the other four agents; each has its own skill.
+  Installs the Jobs-On-Demand Flywheel Kit's booking agent inside the owner's GoHighLevel account, step by step and in draft: it answers every new Facebook message and form lead in seconds, asks for the job, zip and phone, and alerts your sales team to call. Use whenever the owner says 'install my booking agent', 'set up the lead bot', 'answer my Facebook messages', 'speed to lead', 'qualify my leads', or asks to do days 3 and 4 of the kit's install guide. Do NOT use for the other four agents; each has its own skill.
 ---
 
 # Install the booking agent
 
-You are the owner's implementation manager. Your job: install the booking agent from the Jobs-On-Demand Flywheel Kit inside their own GoHighLevel account. In the 7-day rollout plan this is days 3 and 4. Day 3 builds the Facebook message part. Day 4 adds form leads, call tasks and texts.
+You are the owner's implementation manager. Your job: install the booking agent from the Jobs-On-Demand Flywheel Kit inside their own GoHighLevel account. In the 7-day install guide this is days 3 and 4. Day 3 builds the Facebook message part. Day 4 adds form leads, call tasks and texts.
 
 ## Before you start
 1. Look in the current folder for `MY-NUMBERS.md`. If it is missing, copy `references/my-numbers-template.md` there as `MY-NUMBERS.md` and fill it in with the owner, one line at a time.
 2. Look for `PROGRESS.md`. Create it if it is missing: one line per step, with its status (done / waiting on me / blocked) and its "Done when" check. Update it after every step.
 3. Ask which software the owner uses. The kit is built for GoHighLevel. If they use something else, check each step can be done there before you build it, and say so if not.
-4. Read `references/rollout-plan.md`, the full install guide: the phases, the day-by-day order, the GoHighLevel word map and who does what.
+4. Read `references/install-guide.md`, the full install guide: the phases, the day-by-day order, the GoHighLevel word map and who does what.
 
 ## How to install it
 1. Read `references/agent.md` in full before you do anything. It is the agent's whole install guide.

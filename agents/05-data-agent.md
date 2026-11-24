@@ -20,34 +20,25 @@ What it does not do: it never messages customers, and never changes a live ad, a
 - A spreadsheet your team can share. A Google Sheet or an Excel file both work.
 - The software you keep your customers and jobs in (often called a CRM). It must hold a permanent "first source" field and the few fields in step 4 on each contact. It must also give you the week's contacts as a saved list or an export, with those fields showing. If it cannot export, your office reads the counts out each Friday instead.
 - Access to your ad accounts and your Google Business listing.
-- A call-tracking service. It sells forwarding numbers: phone numbers that ring your normal office line and record which ad, mailer or sign the caller saw.
+- Optional: extra tracking phone numbers. Each one rings your normal office line and records which ad, mailer or sign the caller saw. Many customer tools sell these; GoHighLevel does. Without them, the person who answers asks how the caller heard of you.
 - Your own test contact (your name, your mobile) and your [AVERAGE SOLD JOB] in dollars.
 - From MY-NUMBERS.md: [REVIEW TIME] (when the Friday review runs), [COST PER APPOINTMENT LINE], and for the alerts [ALERT CHANNEL], [NUMBERS ALERT LIST], [ALERT HOURS], your floors, and [OUTCOME CHECK TIME] (when the sales rep is reminded, on the evening of a visit, to record what happened).
 - **Push alerts** sent by your tools: your customer tool's own phone app notice, a text to the team member, or your team's chat app. A push alert goes to your team, never to a customer.
 
-**Part 1 works with a spreadsheet and a person typing.** Each step says what to do when your tools can't. Part 2 makes the scoreboard and the alerts run with nobody typing.
+**Part 1 is the whole agent, and it needs no database.** Your customer software already holds every lead, booking and signed job. Part 1 adds the missing fields, a shared spreadsheet and a 20-minute Friday review where your AI fills the sheet from an export. Each step says what to do when your tools can't.
+
+**Part 2 is optional.** It only removes the Friday typing: a database fills the scoreboard and sends the trend alerts by itself. Build it after a few weeks of real numbers, once you know which ones you watch.
 
 **For your own database (about one weekend):** hand this part to whoever builds things for you, such as a tech-comfortable office manager.
 - A hosted database. This guide uses Supabase as its example. Supabase is a website that hosts a database for you. A database is one place that holds your records in tables, like linked spreadsheets. The free plan works.
 - Admin access to your customer software, plus its API key. An API key is a password that lets one piece of software read another.
-- An automation tool that runs small jobs on a schedule. This guide uses n8n as its example. If you use another, your AI assistant follows the same steps with yours. For automatic alerts it must be able to send on [ALERT CHANNEL].
+- A way to run small jobs on a timer. Supabase has one built in, so you need nothing else. If you already use an automation tool, your AI assistant can use it instead. For automatic alerts it must be able to send on [ALERT CHANNEL].
 - A payment or invoicing account.
 - An AI coding tool, such as Claude Code or Codex.
 - A password manager, to hold every key and password.
 
 ## How to install it
-If you already pasted the prompt in START-HERE.md, skip this one. To install this agent by itself, give this file and MY-NUMBERS.md to your AI assistant. Paste this:
-
-```
-Act as my implementation manager for the data agent in this file.
-Work through the steps in order. Build the smallest working scoreboard first.
-Build everything in draft. Use test data and only my own test contact
-until every formula and every check passes.
-Do not change any live ad, budget or customer record without my yes.
-Keep passwords and keys out of your messages and out of every file.
-Publish nothing until I say yes. Connect each live account only at its
-own step, and move on only when that step's "Done when" passes.
-```
+To install this agent alone, type **"install my data agent"**, or use the paste prompt at the end of `INSTALL-GUIDE.md`.
 
 ## Step by step
 
@@ -60,7 +51,7 @@ own step, and move on only when that step's "Done when" passes.
    - Definitions tab: when each count counts (the rule is in the agent's instructions), and the watch list from step 7.
    Done when: all five tabs exist, and a made-up test row works out all ten numbers with no errors.
 
-2. `You + AI` **Give every source its own trackable path.** You buy one forwarding number each for Meta ads, Google Ads, your Google Business listing, mailers, yard signs and referrals. AI makes one QR code or short link for each print piece. AI adds one permanent "first source" field in your customer software, with a fixed list to pick from. Start the list from: Google search ads, Google pay per lead ads, Google Business listing, Google free search, Facebook ads, Instagram, Mailer, Yard sign, Referral, Returning customer. Keep only what you run. Whoever answers a new call asks how they heard of you and picks from the list. Tie call recordings and outcomes to the same contact and the same sold job. The source tags from the reviews agent (file 03, its source tags step) count as first sources too.
+2. `You + AI` **Give every source its own trackable path.** If you use tracking numbers, you buy one each for Meta ads, Google Ads, your Google Business listing, mailers and yard signs. AI makes one QR code or short link for each print piece. AI adds one permanent "first source" field in your customer software, with a fixed list to pick from. Start the list from: Google search ads, Google pay per lead ads, Google Business listing, Google free search, Facebook ads, Instagram, Mailer, Yard sign, Referral, Returning customer. Keep only what you run. Whoever answers a new call asks how they heard of you and picks from the list. Tie call recordings and outcomes to the same contact and the same sold job. The source tags from the reviews agent (file 03, its source tags step) count as first sources too.
    Done when: every channel that matters has its own traceable path, the first-source field exists, and a second contact from a new source does not change it.
 
 3. `You + AI` **Make every lead traceable to one ad.** AI drafts plain names for everything you run. You approve before any live ad is renamed.
@@ -68,14 +59,14 @@ own step, and move on only when that step's "Done when" passes.
    - Ad set: `[MARKET] - [AUDIENCE] - [BUDGET] - [VERSION]`
    - Ad: `[PROBLEM] - [AD TYPE] - [VERSION]`
 
-   No "Copy of Copy of" stays live. Each new contact gets stamped with the source, the campaign and the exact ad, using short labels at the end of each ad link. An ad that opens a Messenger chat has no link: the source comes from the ad details your customer software saves with the conversation. An instant form passes the ad name with the form. A call comes in on the forwarding number for Meta ads. (The ads agent, file 04, its page and tracking step.) Also save the customer's first message.
+   No "Copy of Copy of" stays live. Each new contact gets stamped with the source, the campaign and the exact ad, using short labels at the end of each ad link. An ad that opens a Messenger chat has no link: the source comes from the ad details your customer software saves with the conversation. An instant form passes the ad name with the form. A call comes in on the tracking number for Meta ads, if you use one. (The ads agent, file 04, its page and tracking step.) Also save the customer's first message.
    Done when: a test lead from each live ad shows the source, the campaign and the exact ad on its contact. The lasting proof comes later: pick any job sold after tracking went live and name the exact ad behind it in under 60 seconds.
 
 4. `You + AI` **Give every lead a record from first source to dollars.** AI adds four fields to each contact: Visit Date, Visit Outcome (held / no-show / cancelled / moved), Signed Date and Signed Amount. It reuses the other agents' fields, or creates them here if you skipped that agent. Every field gets one filler:
 
    | Field | Filled by | When |
    |---|---|---|
-   | First source, campaign, ad | Automatic, from the ad or the forwarding number. On a call, the person who answers. | First contact |
+   | First source, campaign, ad | Automatic, from the ad or the tracking number. On a call, the person who answers. | First contact |
    | Qualified (tag `qualified`) | The booking agent (file 01) | During the first conversation |
    | Booked (tag `booked`) and Visit Date | The calendar booking. An automation copies the appointment time into Visit Date. If your tools can't, the person who books types it. | When the visit is booked |
    | Visit Outcome | The sales rep on that visit ([REP NAME]). If moved, the new time goes in Visit Date. | The same day as the visit |
@@ -106,7 +97,7 @@ own step, and move on only when that step's "Done when" passes.
 9. `You + AI` **Create the database.** You open a database project (Supabase, in this guide's example). AI creates five tables and explains each in plain words: contacts (every person who ever inquired, with first source and ad), conversations (what was said), ad results (one row per ad per day), bookings (every appointment, its visit date and its outcome), jobs (signed work, signed date and signed amount).
    Done when: all five tables show in your database's table view (in Supabase, the Table Editor).
 
-10. `You + AI` **Connect your customer software.** You supply the API key through your password manager. AI builds a job in your automation tool (n8n, in this guide's example) that runs every 15 minutes. It fetches only contacts changed since the last good run, with every step 4 field, and updates the same row each time, so there is never a duplicate.
+10. `You + AI` **Connect your customer software.** You supply the API key through your password manager. AI builds a timed job (in Supabase, its built-in scheduler) that runs every 15 minutes. It fetches only contacts changed since the last good run, with every step 4 field, and updates the same row each time, so there is never a duplicate.
     Done when: you change your test contact's Visit Outcome, wait one 15-minute cycle, and see its row update in the database.
 
 11. `AI` **Connect your ad account.** A second job runs daily at 6am. It pulls yesterday's spend, views, clicks and results for each ad.
@@ -324,7 +315,7 @@ Use only made-up test leads on your own test contact (or copies), each with a di
 | Test | Pass mark |
 |---|---|
 | Type one made-up week into the Scoreboard tab | All ten numbers work out, no errors. A source with no spend shows "no spend" |
-| Call each forwarding number from your own phone | Your test contact shows the right first source each time |
+| If you use tracking numbers, call each one from your own phone | Your test contact shows the right first source each time |
 | Reach your test contact again through a second source | First source has not changed |
 | Book a test lead for today and leave Visit Outcome empty | The no-outcome alert reaches your phone at the check time |
 | Mark a test lead's visit held | It counts under Showed in its own source's row |

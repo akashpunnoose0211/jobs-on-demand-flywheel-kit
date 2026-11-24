@@ -24,13 +24,13 @@ Prices change, so check each pricing page.
 
 **Free accounts you probably have:** a Facebook business page and ad account, a Google Business listing, and a free Google Drive folder for crew videos.
 
-**You do NOT need** n8n, Zapier, Supabase (only for phase 5), a separate texting tool, a calendar app, call tracking, or a video editor.
+**You do NOT need** n8n, Zapier, Supabase (only for phase 5), a separate texting tool, a calendar app, a call-tracking service, or a video editor.
 
 ## Everything you will do yourself
 Claude Code does most of the building. These are the things only you can do, all in one list.
 
 - **Buy and sign up:** a Claude plan, GoHighLevel, and a phone number in GoHighLevel.
-- **Paperwork:** submit the texting approval with your legal name, address and tax ID.
+- **Paperwork:** submit the texting approval with your legal name, address and tax ID (`setup/SETUP-TEXTING-APPROVAL.md` walks you through it).
 - **Connect your accounts:** Facebook page, Instagram, Google Business listing, Google calendar, and your ad account.
 - **Make two keys:**
   - A GoHighLevel key for Claude Code.
@@ -61,13 +61,13 @@ Claude Code does most of the building. These are the things only you can do, all
 ---
 
 ## Phase 1: Buy and set up your software (day 1 morning)
-Never used one of these? `SETUP-CLAUDE-CODE.md` and `SETUP-GOHIGHLEVEL.md` cover this phase click by click.
+Never used one of these? `setup/SETUP-CLAUDE-CODE.md` and `setup/SETUP-GOHIGHLEVEL.md` cover this phase click by click.
 
 1. `You` **Buy a Claude plan** at claude.ai (Settings, then Billing).
 2. `You` **Install the Claude desktop app** from claude.ai/download, sign in, and open the **Code** tab.
 3. `You` **Sign up for GoHighLevel** and create one sub-account for your business (your business's own account inside GoHighLevel). Fill in the business profile and time zone.
 4. `You` **Add a card to GoHighLevel's wallet** for texts and calls, with auto-recharge on.
-5. `You` **Buy a phone number in GoHighLevel and submit the texting approval** (A2P, in its Trust Center). Use your exact legal name, address and tax ID. Your website needs a privacy policy page.
+5. `You` **Buy a phone number in GoHighLevel and submit the texting approval** (A2P, in its Trust Center). Use your exact legal name, address and tax ID. Follow `setup/SETUP-TEXTING-APPROVAL.md` first: it fixes your website and gives you the words to submit, so you're approved the first time.
 6. `You` **Add your team** as GoHighLevel users. Each person installs the **LeadConnector** app, logs in, and turns notifications on.
 
 **Done when:** Claude Code opens, you're inside your GoHighLevel sub-account, the texting approval shows as submitted, and every team member is logged into the phone app.
@@ -96,6 +96,13 @@ Never used one of these? `SETUP-CLAUDE-CODE.md` and `SETUP-GOHIGHLEVEL.md` cover
 - `MY-NUMBERS.md` has no blank.
 - The test alert landed on your phone.
 
+**Check your facts before anything gets built.** One wrong fact gets copied into every agent. Read these back from `MY-NUMBERS.md` and fix any that are off:
+- Business name, phone and website, exactly as customers see them.
+- The areas you serve, and the areas you don't.
+- The jobs you take, and the jobs you don't.
+- Your monthly ad budget.
+- Who gets each new lead, and what they do when it arrives.
+
 ---
 
 ## Phase 3: Install the five agents, one a day (days 2 to 7)
@@ -118,7 +125,7 @@ Everything is built switched off, with a filter that lets only your test contact
   - Name the customer experience owner, a backup and a production contact.
   - Pick the jobs that get a call instead of a text.
   - Give your Google review link, and fill in the referral reward card.
-- **Done when:** every test in `03-reviews-agent.md` passes. Texts go live once the approval lands.
+- **Done when:** every test in `agents/03-reviews-agent.md` passes. Texts go live once the approval lands.
 
 ### Day 3: Booking agent, Facebook messages: **"install my booking agent, the Facebook message part"** (about 3 hours)
 - **What gets built:**
@@ -131,7 +138,7 @@ Everything is built switched off, with a filter that lets only your test contact
   - Give your services, areas and the jobs you don't take.
   - Approve the bot's wording.
   - Message your own page to test.
-- **Done when:** tests 1 to 9, 13 and 15 in `01-booking-agent.md` pass. On your yes, the bot goes live on Facebook messages (no texting approval needed).
+- **Done when:** tests 1 to 9, 13 and 15 in `agents/01-booking-agent.md` pass. On your yes, the bot goes live on Facebook messages (no texting approval needed).
 
 ### Day 4: Booking agent, form leads and calls: **"finish my booking agent: form leads and calls"** (about 2 hours)
 - **What gets built:**
@@ -151,7 +158,7 @@ Everything is built switched off, with a filter that lets only your test contact
   - Give your real financing, warranty and discount rules.
   - Give the most common pushback after a quote, and your answer.
   - Name the quote owner and a backup, and approve each message.
-- **Done when:** every test in `02-follow-up-agent.md` passes, with waits shortened for testing and then put back.
+- **Done when:** every test in `agents/02-follow-up-agent.md` passes, with waits shortened for testing and then put back.
 
 ### Day 6: Data agent, the scoreboard: **"install my data agent, part 1"** (about 2 hours)
 - **What gets built:**
@@ -160,9 +167,9 @@ Everything is built switched off, with a filter that lets only your test contact
   - The weekly scoreboard spreadsheet.
   - The Friday review, and the trend alerts to your phone.
 - **What you do:**
-  - Buy one extra GoHighLevel number per lead source you run.
+  - Optional: buy one extra GoHighLevel tracking number per lead source you run. Without them, whoever answers asks how the caller heard of you.
   - Set a floor for each number you want watched, and pick your Friday review time.
-- **Done when:** the Part 1 tests in `05-data-agent.md` pass on made-up weeks.
+- **Done when:** the Part 1 tests in `agents/05-data-agent.md` pass on made-up weeks.
 
 ### Day 7: Ads agent: **"install my ads agent"** (about 4 hours)
 - **What gets built:**
@@ -174,7 +181,7 @@ Everything is built switched off, with a filter that lets only your test contact
   - Give your monthly ad cap and your most per booked appointment, and name the approver.
   - Share the clips folder with the crew.
   - Optional: give Claude Code limited access to your ad account (manage campaigns only, no payment or admin rights). Without it, Claude Code tells you each click.
-- **Done when:** the words, settings, path and test-lead checks in `04-ads-agent.md` pass.
+- **Done when:** the words, settings, path and test-lead checks in `agents/04-ads-agent.md` pass.
 
 ---
 
@@ -190,8 +197,14 @@ Everything is built switched off, with a filter that lets only your test contact
 
 **Done when:** a real lead runs from first message to a clean hand-off, its alert lands on the team's phones, and the ads are on or waiting only on your approver.
 
+**Your first week live.** Don't launch and disappear. Type **"check my first week"** each day, and Claude Code looks with you:
+- **Daily:** ad spend is on pace, leads are arriving, the bot is replying, good leads reach a person, bad fits are turned away politely, and your team calls fast enough.
+- **After 7 days:** cost per lead, how many leads were a good fit, how many booked, why bad fits didn't fit, any missed hand-offs, and where the bot got confused. Claude Code writes the fixes into `PROGRESS.md`.
+
 ## Phase 5: Advanced: your own database (optional, after a few weeks)
-This makes your Friday numbers fill in by themselves. You need a free Supabase account and Claude Code or Codex. Type **"install my data agent, part 2"**. It follows `05-data-agent.md` steps 9 to 16, using Supabase's built-in scheduler instead of n8n.
+The data agent already works without this. Day 6 gives you the scoreboard, the alerts and the Friday review, using GoHighLevel and a spreadsheet. Phase 5 only removes the Friday typing: a database fills the scoreboard and sends the trend alerts by itself.
+
+Wait until you've run a few Fridays, so you know which numbers you actually watch. You need a free Supabase account (a website that hosts a database for you) and Claude Code or Codex. Type **"install my data agent, part 2"**. It follows `agents/05-data-agent.md` steps 9 to 16, using Supabase's built-in scheduler.
 
 **Done when:** every Part 2 test passes and Friday's numbers fill with nobody typing.
 
@@ -209,7 +222,7 @@ This makes your Friday numbers fill in by themselves. You need a free Supabase a
 | Push alert to your team | A workflow step that sends an internal notification to the LeadConnector phone app |
 | Internal form | A form (Sites, then Forms) |
 | Test mode | A filter at the top of each workflow: only contacts tagged `test contact` get through |
-| Forwarding number | An extra GoHighLevel number that rings your main line |
+| Tracking number | An extra GoHighLevel number that rings your main line |
 | Template, snapshot | A GoHighLevel snapshot, imported in phase 2 |
 
 Menus in GoHighLevel move. If a name isn't where this guide says, search for it inside GoHighLevel.
@@ -220,27 +233,34 @@ Menus in GoHighLevel move. If a name isn't where this guide says, search for it 
 - **Always you:** buying, payment, the texting approval, and every "yes, go live".
 
 ## Not using the plugin? Paste this prompt instead
-Open your kit folder in your AI assistant and paste:
+This is the kit's only prompt. Use it with a plain chat AI, with customer software other than GoHighLevel, or to install one agent by itself. Open your kit folder in your AI assistant and paste:
 
 ```
 You are my implementation manager. This folder is the Jobs-On-Demand
-Flywheel Kit. I use GoHighLevel. Read ROLLOUT-PLAN.md, START-HERE.md
-and MY-NUMBERS.md first, then follow ROLLOUT-PLAN.md one phase and one
-day at a time.
+Flywheel Kit. Read START-HERE.md, INSTALL-GUIDE.md and MY-NUMBERS.md
+first. The agent files are in the agents folder.
 
-Use GoHighLevel's names for everything. Build what your connection to
-GoHighLevel allows yourself. For anything only a person can build there,
-give me one click-by-click step at a time, then check my work from my
-test contact before you go on.
+My customer software is: [GoHighLevel, or name yours].
+If it is not GoHighLevel, first ask me which tools I use for customers,
+texts, calendar and ads. Check whether they can do each step, use their
+names for things, and tell me the simplest way around any step they
+cannot do before you go on.
 
-Build every workflow in draft, with the test contact filter at the top.
-Show me every new message before a customer can see it. Ask me for any
-fact you do not have. Never guess. Never save a key or password in the
-kit's files. Turn nothing on for real customers until every test in that
-agent's file passes and I say yes.
+I want to install: [all five agents, in the guide's order / only the
+NAME agent]. Follow INSTALL-GUIDE.md one phase and one day at a time.
+
+Build what your connection to my tools allows yourself. For anything
+only a person can build, give me one click-by-click step at a time,
+then check my work from my test contact before you go on.
+
+Build every automation in draft, with a filter that lets only my test
+contact through. Show me every new message before a customer can see
+it. Ask me for any fact you do not have. Never guess. Never save a key
+or password in the kit's files. Turn nothing on for real customers until
+every test in that agent's file passes and I say yes.
 
 Keep PROGRESS.md: one line per step, with its status (done / waiting on
-me / blocked) and its "Done when" check. Start with phase 1.
+me / blocked) and its "Done when" check. Start now.
 ```
 
 ## If you get stuck

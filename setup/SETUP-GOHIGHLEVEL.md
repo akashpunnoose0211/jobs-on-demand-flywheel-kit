@@ -1,7 +1,7 @@
 # Set up GoHighLevel (for beginners)
 **Jobs-On-Demand Flywheel Kit · read this first if you don't have GoHighLevel yet**
 
-> GoHighLevel is where your five agents live and run every day: your contacts, texts, calendar, automations, chat bot and team alerts, all in one account. This guide covers phase 1 of the install guide (`ROLLOUT-PLAN.md`) for GoHighLevel, in about an hour of your time. The texting approval in step 5 then takes a few days.
+> GoHighLevel is where your five agents live and run every day: your contacts, texts, calendar, automations, chat bot and team alerts, all in one account. This guide covers phase 1 of the install guide (`INSTALL-GUIDE.md` (in the main kit folder)) for GoHighLevel, in about an hour of your time. The texting approval in step 5 then takes a few days.
 
 ## What you need before you start
 - Your business's legal name, address and tax ID (EIN), exactly as the IRS has them. The texting approval checks these.
@@ -27,7 +27,7 @@
 4. `You` **Add a card for texts and calls.** Texts, calls and AI replies are billed by use from a wallet. Add your card, and turn on auto-recharge so texts never stop. Set a low recharge amount at first.
    Done when: the wallet shows a balance and auto-recharge is on.
 
-5. `You` **Get your phone number and start the texting approval.** In **Settings**, then **Phone Numbers**, buy a local number (or follow the steps to bring your main number over). Then fill in the business texting registration (GoHighLevel calls it A2P 10DLC, in its Trust Center). Use the exact legal name, address and tax ID. **Do this today.** Approval often takes several days, and no automatic text goes out until it's approved.
+5. `You` **Get your phone number and start the texting approval.** In **Settings**, then **Phone Numbers**, buy a local number (or follow the steps to bring your main number over). Then fill in the business texting registration (GoHighLevel calls it A2P 10DLC, in its Trust Center). Use the exact legal name, address and tax ID. `SETUP-TEXTING-APPROVAL.md` (in this folder) walks you through every box, with words you can paste. **Do this today.** Approval often takes several days, and no automatic text goes out until it's approved.
    Done when: the registration shows as submitted.
 
 6. `You` **Add your team.** In **Settings**, then **My Staff** (or **Team**), add each person who will get alerts or work leads. Give each their own login, never a shared one.
@@ -54,4 +54,4 @@
 - **Menus moved.** GoHighLevel changes its menus often. If a name here isn't where this guide says, use the search bar inside GoHighLevel.
 - **Alerts don't reach a phone.** Check that the person is logged into the LeadConnector app with their own user and that the phone allows its notifications.
 
-Done when: steps 1 to 10 are done (11 if you have a template). Then open `ROLLOUT-PLAN.md` and go to phase 2.
+Done when: steps 1 to 10 are done (11 if you have a template). Then open `INSTALL-GUIDE.md` (in the main kit folder) and go to phase 2.

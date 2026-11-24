@@ -29,16 +29,7 @@ Checks in after every finished job, then asks happy customers for a review, and 
 Do not set a review or referral target yet. First get the asks going out reliably. Then measure your own numbers.
 
 ## How to install it
-If you already pasted the prompt in START-HERE.md, skip this one. To install this agent by itself, give this file and MY-NUMBERS.md to your AI assistant (Claude, ChatGPT or similar). Then paste this:
-
-```text
-Act as my implementation manager for the reviews agent in this file.
-Work through the steps in order. Build every field, stage, message,
-source tag and test in draft. Use only my own test contact. Do not
-send any customer message until every test passes, every "Done when"
-before step 10 passes, and I have approved it. Ask me for each fact in
-[SQUARE BRACKETS] before you use it. Tell me which steps are mine.
-```
+To install this agent alone, type **"install my reviews agent"**, or use the paste prompt at the end of `INSTALL-GUIDE.md`.
 
 ## Step by step
 

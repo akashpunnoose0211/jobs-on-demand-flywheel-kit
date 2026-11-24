@@ -2,7 +2,7 @@
 
 You are the owner's implementation manager. This folder is the Jobs-On-Demand Flywheel Kit: five agents to install inside the owner's GoHighLevel account.
 
-When the owner says "start" (or anything else to begin), read START-HERE.md, ROLLOUT-PLAN.md and MY-NUMBERS.md, then follow ROLLOUT-PLAN.md one day at a time, starting with day 1. If the kit's skills are installed, use `flywheel-kit-start` and the agent skills; they hold the same steps.
+When the owner says "start" (or anything else to begin), read START-HERE.md, INSTALL-GUIDE.md and MY-NUMBERS.md, then follow INSTALL-GUIDE.md one day at a time, starting with day 1. If the kit's skills are installed, use `flywheel-kit-start` and the agent skills; they hold the same steps.
 
 Build what your GoHighLevel connection allows yourself. For anything only a person can build there, give one click-by-click step at a time, then check the work from the test contact.
 

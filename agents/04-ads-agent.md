@@ -39,26 +39,17 @@
 - **Booked appointments by ad:** the Scoreboard rows from your data agent (file 05), or counts your office reads out weekly. No count, no spend change.
 
 ## How to install it
-If you already pasted the prompt in START-HERE.md, skip this one. To install this agent by itself, paste this into your AI assistant with this file and MY-NUMBERS.md attached.
-
-```
-Act as my implementation manager for the attached file.
-Work through "Step by step" in order.
-Do every AI step yourself. Ask me for every You input.
-Build everything in draft. Test only with my own test contact.
-Build every ad and campaign switched off. Turn nothing on and spend
-nothing until every test passes and I have approved it.
-Run the spend rules in practice mode until I say they are right.
-Never open or change payment settings or ad account ownership.
-```
+To install this agent alone, type **"install my ads agent"**, or use the paste prompt at the end of `INSTALL-GUIDE.md`.
 
 ## Step by step
 
 1. `You` **Pick one starting point.** Choose one area, one problem, one service, one offer and one next step. Example: "Homeowners near [CITY] with [VISIBLE PROBLEM] after [TRIGGER]."
    Done when: you can say the target in one sentence, with a named market and problem.
 
-2. `You + AI` **Build the problem bank and fear map.** The AI lists the signs a homeowner sees for your trade (for example: water on the floor after heavy rain). For each sign it writes what they fear, what ignoring it costs, why they put it off, and what they must believe to act. It also lists the false fixes they try first and their top questions: is it expensive, can it wait, do you serve my area. You confirm it matches what local homeowners say.
-   Done when: every sign has a fear map, and the false-fix and question lists exist.
+2. `You + AI` **Build the problem bank and fear map.** First, describe one homeowner from step 1 like a real person, not a report. Say what home they live in, how long they have owned it, and what finally makes them call. The AI lists the signs a homeowner sees, smells or hears for your trade (for example: a water stain on the ceiling). It notes what makes each sign worse, such as rain, heat or a cold snap. For each sign it writes what they fear, what ignoring it costs, why they put it off, and what they must believe to act. Most fears are about safety, cost, resale or how the home looks. It also lists the false fixes they try first and their top questions: is it expensive, can it wait, do you serve my area. You confirm it matches what local homeowners say.
+   - Local rivals: the AI reads the ads and websites of 5 local competitors. For each it notes the headline, services, offer, warranty, proof and what it leaves out. You are looking for the gap, not words to copy.
+   - Opening lines: for each sign, the AI drafts five kinds of question. Sign: "Is your [VISIBLE PROBLEM] getting worse?" Fear: "Worried [VISIBLE PROBLEM] means something bigger?" Timing: "After [TRIGGER], noticing [VISIBLE PROBLEM]?" Check first: "Thinking about a full replacement? Check this first." Local: "[CITY] homeowners: noticing [VISIBLE PROBLEM]?" Keep the ones that sound like a homeowner talking to their spouse.
+   Done when: every sign has a fear map, and the false-fix, question and rival lists exist. You can name the homeowner, sign, fear, false fix, local trigger and next step.
 
 3. `AI` **Save a reference file.** Save 5 or more ad structures from contractors in other markets and from the Meta Ad Library. Borrow the format or the order. Rewrite every word.
    Done when: 5 or more are saved and none is copied word for word.
@@ -76,12 +67,14 @@ Never open or change payment settings or ad account ownership.
    Done when: you know when the backup visit would run, and who films it.
 
 8. `You + AI` **Set up the page and the tracking.** You click; the AI checks.
-   - Page: the name matches your website and Google profile. Category is Contractor. Photo, cover and About are complete. A new page has 3 to 5 real posts live.
-   - Business: correct Business Manager and ad account, payment active, no stray admins.
+   - Page name: your real business name, letter for letter as on your website and Google profile. Adding your city is fine. No claims like "#1", "best" or "cheapest", no all caps, no emojis, no list of keywords.
+   - Profile: category is Contractor, or the closest fit for your trade. Complete the photo (your logo), cover (a real job or team photo) and About (what you do, the towns you serve). Website, phone, address and hours match Google. The username matches the page name.
+   - New page: 3 to 5 real posts live (a job photo, a quick tip, a review), spread over a few days. Let it sit a few days to a week before the first ad.
+   - Business: correct Business Manager and ad account, payment active in the business's name, no stray admins. Verify the business if Meta offers it. If Meta has flagged your personal profile, start a clean Business Manager rather than rescue it.
    - Tracking: save the Page ID. Each place the ads send people must carry the ad's name into your CRM:
      - Messenger chat: create an events dataset, the record that ties messages back to ads, and save its Dataset ID. In Events Manager: Data Sources, Connect Data Source, Messaging, Facebook Page. Pick your page, then connect the dataset to the ad account.
      - Instant form: pass the ad name with the form, and connect the form to your CRM so each lead lands there at once, where the booking agent's form lead fast reply picks it up. If your CRM cannot receive form leads by itself, tell your AI assistant before you go on.
-     - Phone call: the ad rings the forwarding number for Meta ads from the data agent (file 05, its trackable path step), which rings your business line.
+     - Phone call: the ad rings the tracking number for Meta ads from the data agent (file 05, its trackable path step), which rings your business line.
    - One path per ad: ad, then the chat, the form or the call, then the lead saved in your CRM with its ad.
    Done when: every box is checked, the Page ID (and the Dataset ID, for Messenger) is saved, and each place you will run passes its test lead.
 
@@ -96,16 +89,17 @@ Never open or change payment settings or ad account ownership.
     - Objective: Leads. Set to conversations for a Messenger chat (if Meta does not offer it, use Engagement set to conversations, and check each week until it appears), to an instant form for a form, or to calls for a call, as Meta offers them.
     - The starting nine go to a short instant form. Do not change the path while you are testing ads. Messenger and call ads are added once the first nine have booked visits, each new place on [APPROVER NAME]'s yes. For call ads, set up the missed-call alert in the booking agent (agent 1, its push alerts step).
     - Daily budget on the campaign, not the ad set, so money flows to the ads doing best. Start it at the number of ads times [MONEY PER AD A DAY]. If that would pass [MONTHLY AD BUDGET] over the month, cut no ads: send alert 6. The owner raises the budget or runs longer.
-    - Build the area by hand. Never carry over cities, states, datasets or pictures from an old campaign.
+    - Names a person can read later. Campaign: market, service, offer, month (for example: "Tampa - Roof Repair - Free Estimate - Mar"). Ad set: market, audience, version. Ad: problem, format, version (for example: "Ceiling Stain - Photo - V1").
+    - Build the area by hand: [CITY] and the towns in [SERVICE AREAS], within [RADIUS] miles. If Meta's audience estimate is tiny, fix the area first, never with interests. Never carry over cities, states, datasets or pictures from an old campaign.
     - Audience: ages 35 to 65+, never below 30, all genders, broad. Check placements by hand. Assign the correct dataset.
     - Turn OFF: Advantage+ creative, AI text, headline generation, Related Media, Multi-advertiser Ads, text improvements and Meta recommendations.
-    - Paste the approved words. Use real photos or job video from the same service.
+    - Paste the approved words. Use real photos or job video from the same service. Check the services listed are ones you sell. Check that no private notes, customer details or claims you cannot back up slipped in.
     - Never aim at raw leads or clicks.
     - Instant form: one buying question, full name, phone, email, ZIP code. Ask for the street address only when lead quality, not volume, is your problem. Sorting questions that close the form on a "no": Do you own the home? Are you looking to fix this within the next three months? Leave the budget question off at launch. Only people who pass count as leads.
     - Leave the campaign switched off.
     Done when: the campaign exists, is off, holds the nine, and passes the words check in the test list.
 
-12. `You + AI` **Check the path from each ad.** Tap an ad preview. Messenger chat: the first reply starts fast and asks one easy thing; zip code is cleanest, since it confirms the service area first. Instant form: it asks only the fields above and closes on a "no". Phone call: it rings your business line. Add no giveaway or extra automation in front of any of them.
+12. `You + AI` **Check the path from each ad.** Tap an ad preview. Messenger chat: the first reply starts fast and asks one easy thing; zip code is cleanest, since it confirms the service area first. Instant form: it asks only the fields above and closes on a "no". Phone call: it rings your business line. Add no giveaway or extra automation in front of any of them. The path is ready when a homeowner can tap the ad, land in your CRM with its ad name, and get a fast first reply. Nobody retypes a form or chat lead by hand.
     Done when: the path check in the test list passes.
 
 13. `You + AI` **Run one test lead, then launch on a yes.** Use an ad preview as your own test contact: message it, fill in its form, or call it. When all six test lead checks pass, the AI sends alert 4 for each ad. On [APPROVER NAME]'s yes, it turns the campaign on, or tells you which switch to click. Later ads follow LAUNCHING in the instructions.
@@ -138,7 +132,7 @@ change no spend. Send each alert 5 as "Would change:" instead.
 FACTS (use only these; ask if one is missing)
 Starting point: [ONE AREA] / [ONE PROBLEM] / [ONE SERVICE] / [ONE OFFER] / [ONE NEXT STEP]
 Seven lines: [OPENING LINE] [HOMEOWNER LINE] [CLIMATE LINE] [SEASONAL TRIGGERS] [AUTHORITY LINE] [DESIGNED-FOR LINE] [SERVICE AREAS LINE]
-Problem bank, fear maps, false fixes, homeowner questions: [PASTE]
+Problem bank, fear maps, false fixes, homeowner questions, rival gaps, opening lines: [PASTE]
 Spend: [MONTHLY AD BUDGET] [COST PER APPOINTMENT LINE] [MONEY PER AD A DAY] [DAYS BETWEEN RAISES]
 People and places: [CREW ALERT LIST] [APPROVER NAME] [EDITOR NAME] [CLIPS FOLDER]
 
@@ -361,8 +355,10 @@ Run these before a customer sees anything. None spends real money: ads stay off,
 - **Starting nine:** three angles in three formats, all off in one ad set. Set a made-up [MONTHLY AD BUDGET] too small for the starting budget: alert 6 comes, and no ad is cut.
 - **Video:** problem shown in the first 2 seconds, real job, one next step, captions on, file named like the ad.
 - **Shots:** before and after come from the same mark; the batch covers the three buckets.
+- **Page:** the name matches your website and Google letter for letter, with no claims, all caps or emojis. Every profile field in step 8 is filled. A new page has 3 to 5 posts spread over a few days.
 - **Settings:** every line in step 11 holds, including the seven switches off. The campaign is off.
-- **Path:** the button matches the place. A chat opens the correct page conversation and the first reply starts fast. A form closes on a "no" and its lead lands in the CRM at once. A call rings the business line. The CRM shows the campaign and the ad.
+- **Names:** the campaign, ad set and each ad follow step 11's name pattern. A person reading a report can tell what each one is.
+- **Path:** the button matches the place. A chat opens the correct page conversation and the first reply starts fast. The test chat shows up on the dataset in Events Manager. A form closes on a "no" and its lead lands in the CRM at once. A call rings the business line. The CRM shows the campaign and the ad.
 - **Test lead, six checks, all must pass:**
   1. Contact created with name, phone, zip and project type. For a call, the person who answers creates it.
   2. The source is readable: you can see which ad produced it.
