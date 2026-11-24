@@ -1,0 +1,15 @@
+{
+  "name": "jobs-on-demand-flywheel-kit",
+  "owner": {
+    "name": "St. Pierre"
+  },
+  "description": "The Jobs-On-Demand Flywheel Kit for home service businesses on GoHighLevel.",
+  "plugins": [
+    {
+      "name": "jobs-on-demand-flywheel-kit",
+      "source": "./",
+      "description": "The Jobs-On-Demand Flywheel Kit: five agents for your GoHighLevel account, installed by your AI.",
+      "version": "1.0.0"
+    }
+  ]
+}
