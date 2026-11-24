@@ -1,7 +1,7 @@
 # Set up GoHighLevel (for beginners)
 **Jobs-On-Demand Flywheel Kit · read this first if you don't have GoHighLevel yet**
 
-> GoHighLevel is where your five agents live and run every day: your contacts, texts, calendar, automations, chat bot and team alerts, all in one account. This guide gets a new account ready for day 1 of the rollout plan, in about an hour of your time. The texting approval in step 5 then takes a few days.
+> GoHighLevel is where your five agents live and run every day: your contacts, texts, calendar, automations, chat bot and team alerts, all in one account. This guide covers phase 1 of the install guide (`ROLLOUT-PLAN.md`) for GoHighLevel, in about an hour of your time. The texting approval in step 5 then takes a few days.
 
 ## What you need before you start
 - Your business's legal name, address and tax ID (EIN), exactly as the IRS has them. The texting approval checks these.
@@ -54,4 +54,4 @@
 - **Menus moved.** GoHighLevel changes its menus often. If a name here isn't where this guide says, use the search bar inside GoHighLevel.
 - **Alerts don't reach a phone.** Check that the person is logged into the LeadConnector app with their own user and that the phone allows its notifications.
 
-Done when: steps 1 to 10 are done (11 if you have a template). Then open `ROLLOUT-PLAN.md`: you've already done most of day 1.
+Done when: steps 1 to 10 are done (11 if you have a template). Then open `ROLLOUT-PLAN.md` and go to phase 2.

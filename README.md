@@ -26,7 +26,7 @@ Then say **"start the flywheel kit"**.
 **2. Paste a link into Claude or Codex.** Paste this, and say "save these as skills":
 
 ```
-https://github.com/akashpunnoose0211/jobs-on-demand-flywheel-kit/tree/v1.0.0/skills
+https://github.com/akashpunnoose0211/jobs-on-demand-flywheel-kit/tree/v1.0.1/skills
 ```
 
 Then say **"start the flywheel kit"**.

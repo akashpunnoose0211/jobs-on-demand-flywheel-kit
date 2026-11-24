@@ -27,7 +27,7 @@
 5. `You` **Open the kit folder in Claude Code.** Pick that folder when the Code tab asks which folder to work in.
    Done when: you type "what files are in this folder?" and it lists START-HERE.md, ROLLOUT-PLAN.md and the five agent files.
 
-6. `You` **Type "start".** Claude Code reads the kit's instructions by itself and begins day 1 of the rollout plan.
+6. `You` **Type "start".** Claude Code reads the kit's instructions by itself and picks up at phase 2 of the install guide (`ROLLOUT-PLAN.md`).
 
 ## The other way: Claude Code in the terminal
 Use this only if you like typing commands. Everything else in the kit works the same.
@@ -57,4 +57,4 @@ Codex (OpenAI's version, with a paid ChatGPT plan) works the same way: install t
 | "Usage limit reached" | You've used up your plan for now. Wait for the reset time it shows, or move up to Max. |
 | It asks for something you don't have | Say "I don't have that. What's the simplest way around it?" |
 
-Done when: Claude Code is open in the kit folder and has started day 1.
+Done when: Claude Code is open in the kit folder and has started the install guide.

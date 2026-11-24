@@ -37,9 +37,9 @@ A push alert is a short notice on a team member's phone. It lands the moment a p
 
 ## How to use this kit (3 steps)
 
-1. **Open `ROLLOUT-PLAN.md`.** It says what software you need and what to install each day, easiest first.
-2. **Open this folder in your AI assistant and paste the prompt from `ROLLOUT-PLAN.md`.** On day 1 your AI helps you fill in `MY-NUMBERS.md` (about 10 minutes; guesses are fine to start).
-3. **Install one agent a day, in the plan's order.** Each agent file says what you need before you start.
+1. **Open `ROLLOUT-PLAN.md`, the full install guide.** It runs in five phases over 7 days: buy your software, load the kit, install one agent a day, go live, and an optional advanced step. It also lists everything you'll do yourself.
+2. **Install the kit in Claude Code and type "start the flywheel kit".** Phase 2 shows the three ways to install (plugin, link or zip). On day 1 your AI helps you fill in `MY-NUMBERS.md` (guesses are fine to start).
+3. **Install one agent a day, in the guide's order.** Each agent file says what you need before you start.
 
 Each agent file also has its own short prompt. Use that one only when you install a single agent by itself.
 
